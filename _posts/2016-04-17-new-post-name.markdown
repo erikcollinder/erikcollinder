@@ -1,6 +1,6 @@
 ---
 title: Needed front matter
-date: 2016-04-17
+date: 2016-04-17 00:00:00 Z
 layout: post
 ---
 
