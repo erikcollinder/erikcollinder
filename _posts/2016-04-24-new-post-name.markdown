@@ -1,7 +1,7 @@
 ---
 title: Needed front matter
 date: 2016-04-24 18:31:00 Z
-Layout: post
+layout: post
 ---
 
 # Just a fine ass day
