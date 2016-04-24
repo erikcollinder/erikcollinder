@@ -14,4 +14,4 @@ The software if the iPad is not there yet. It's just immature I suppose but it's
 
 Right so let's try to add an image and see what happens: 
 
-![Erik and dog](erikanddog.jpeg)
+![Erik and dog]({{ site.url }/_posts/erikanddog.jpeg)
