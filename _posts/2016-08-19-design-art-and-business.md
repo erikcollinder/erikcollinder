@@ -1,5 +1,6 @@
 ---
-title: "The Business and Art of Design"
+title: The Business and Art of Design
+date: 2016-08-19 00:00:00 Z
 subtitle: What is at the edge of data and intuition
 layout: post
 ---
