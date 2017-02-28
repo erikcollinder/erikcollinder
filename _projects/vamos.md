@@ -1,7 +1,7 @@
 ---
-title: Needed front matter
-date: 2016-04-17 00:00:00 Z
-layout: post
+title: Co-founding <em>Vamos</em> The Event Guide
+subtitle: Art Direction and Founding
+layout: project
 ---
 
 # Just a fine ass day
@@ -11,7 +11,3 @@ Trying to see if I could write and post stuff ton my bloody iPad to a Jekyll blo
 I'm _also_ working out what it feels like to type on an iPad. It's not bad. I miss the slightly longer travel of a MacBook Pro I guess but then maybe I could get used to this with a bit of touch typing training. 
 
 The software if the iPad is not there yet. It's just immature I suppose but it's getting better every month, every year. 
-
-Right so let's try to add an image and see what happens: 
-
-![Erik and dog](/images/erikanddog.jpeg)
