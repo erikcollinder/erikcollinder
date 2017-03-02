@@ -1,9 +1,12 @@
 ---
 title: The Business and Art of Design
 date: 2016-08-19 00:00:00 Z
+tags:
+- design
+- business
+- thinking
 subtitle: What is at the edge of data and intuition
 layout: post
-tags: [design, business, thinking] 
 ---
 
 - Is boredom at the heart of the problem?
