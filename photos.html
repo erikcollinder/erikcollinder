@@ -1,24 +1,10 @@
 ---
-title: Photo Page
+title: Photos
 permalink: "/photos/"
 layout: default
+order: 4
 ---
 
-<div class="home">
+<p>There will be photos here</p>
 
-  <h1 class="page-heading">{{ page.title}}</h1>
-
-  <ul class="post-list">
-    {% for project in site.projects %}
-      <li>
-        <span class="post-meta">{{ project.subtitle}}</span>
-
-        <h2>
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-
-</div>
+{% include post-list.html %}

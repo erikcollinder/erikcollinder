@@ -1,7 +1,8 @@
 ---
-title: About Page
+title: About
 permalink: "/about/"
 layout: page
+order: 2
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Erik Collinder is a Swedish dude. He's got two dogs and can't speak german yet.
