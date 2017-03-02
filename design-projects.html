@@ -1,0 +1,24 @@
+---
+title: Design Projects
+permalink: "/projects/"
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">{{ page.title}}</h1>
+
+  <ul class="post-list">
+    {% for project in site.projects %}
+      <li>
+        <span class="post-meta">{{ project.subtitle}}</span>
+
+        <h2>
+          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>
