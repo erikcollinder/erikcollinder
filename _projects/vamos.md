@@ -1,7 +1,15 @@
 ---
-title: Co-founding <em>Vamos</em> The Event Guide
-subtitle: Art Direction and Founding
+title: Vamos, The Event Guide
+subtitle: Co-Founding and Art Direction
 layout: project
+table:
+- key: Font
+  value: Comic Sans
+- key: Agency
+  value: These Guys
+- key: Parter Person
+  value: Luis-Daniel Alegría
+
 ---
 
 # Just a fine ass day

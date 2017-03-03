@@ -1,6 +1,6 @@
 ---
-title: Google Web Lab Installation
-subtitle: Branding and Interaction Design
+title: Kat-Knix Wordmark
+subtitle: Lettering of Logo
 layout: project
 ---
 
