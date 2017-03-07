@@ -4,19 +4,19 @@ layout: default
 order: 5
 ---
 
-<h1>How and why to hire me</h1> 
-
-Helllo
+# How and why to hire me
 
 Everything you ever need to know to hire me.
 
 ## Contact Info
 
-The most important piece of information you'll need to hire me, is my email. 
+The most important piece of information you'll need to hire me, is contact info. 
 
-<collinder.erik@gmail.com>
+{{site.email}}
 <small>I'll get to you within 24 hours.</small>
 
+{{site.phone}}
+<small>iMessage also works</small>
 
 ## Approach
 
