@@ -2,6 +2,7 @@
 title: Vamos, The Event Guide
 subtitle: Co-Founding and Art Direction
 layout: project
+date: 2012-03-09
 table:
 - key: Font
   value: Comic Sans
