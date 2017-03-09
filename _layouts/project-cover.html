@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="project">
+
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.subtitle }}</h2>
+    
+    <p class="description">
+      {{ page.description }}
+    </p>
+
+    {% if page.table %}
+  	<dl>
+  		{% for row in page.table %}			
+  				<dt>{{ row.key }}</dt>
+  				<dd>{{ row.value }}</dd>
+  		{% endfor %}
+  	</dl>
+    {% endif %}
+    
+  </header>
+
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
