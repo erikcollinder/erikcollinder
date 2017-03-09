@@ -1,5 +1,7 @@
+{% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+
 <ul class="project-list">
-    {% for project in site.projects %}
+    {% for project in sorted_projects %}
       <li>
         <span class="post-meta">{{ project.subtitle }}</span>
 
