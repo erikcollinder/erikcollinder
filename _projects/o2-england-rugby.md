@@ -2,6 +2,7 @@
 title: O2 and England Rugby
 subtitle: Art Direction of Mobile Game
 layout: project
+date: 2014-03-09
 table:
 - key: Agency
   value: B-reel London
