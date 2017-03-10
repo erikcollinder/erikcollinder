@@ -10,15 +10,16 @@ table:
   value: These Guys
 - key: Parter Person
   value: Luis-Daniel Alegría
-
+blocks:
+  - image: cellar.jpg
+    layout: full
+  - title: First block
+    image: dessert.jpg
+  - title: Second block
+    image: forrest.jpg
+    text: I just loooooove the forrest
+  - image: cellar.jpg
+  - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo varius massa, quis rhoncus enim viverra vel. Fusce vehicula mi quis felis pretium vel eleifend est mattis. Pellentesque cursus scelerisque arcu, volutpat venenatis augue dictum id.
 ---
 
 Vamos was acquired by FanMiles in April 2016
-
-![Dancing weirdoes]({{ site.url }}/images/dogsandbev.gif)
-
-Trying to see if I could write and post stuff ton my bloody iPad to a Jekyll blog. I suppose this should work and show up straight on the erikcollinder.github.io site.
-
-I'm _also_ working out what it feels like to type on an iPad. It's not bad. I miss the slightly longer travel of a MacBook Pro I guess but then maybe I could get used to this with a bit of touch typing training. 
-
-The software if the iPad is not there yet. It's just immature I suppose but it's getting better every month, every year. 
