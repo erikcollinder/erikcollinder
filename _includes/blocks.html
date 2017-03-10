@@ -24,7 +24,7 @@
       <!-- Default Layout -->
       
       <div class="layout-wrapper">
-        <h2>{{ block.title }}</h2>
+        <h2>{{ block.title | markdownify }}</h2>
         
         {% if block.image %}
         
@@ -35,7 +35,7 @@
         
         {% else %}
 
-          <p><strong>{{ block.text }}</strong></p>
+          <p>{{ block.text | markdownify }}</p>
 
         {% endif %}
 
