@@ -1,0 +1,55 @@
+{% if page.blocks %}
+
+<div class="block-wrapper">
+  
+  {% for block in page.blocks %}
+
+    <div class="block-item {{ block.layout }}">
+    
+    {% case block.layout %}
+
+      {% when "full" %}
+
+      <!-- Full width block -->
+
+        <h2>{{ block.title }}</h2>
+        
+        <figure>
+          <img src="{{ page.url }}{{ block.image }}" alt="{{ block.title }}">
+          <figcaption>{{ block.text }}</figcaption>
+        </figure>
+
+      {% else %}
+
+      <!-- Default Layout -->
+      
+      <div class="layout-wrapper">
+        <h2>{{ block.title }}</h2>
+        
+        {% if block.image %}
+        
+        <figure>
+          <img src="{{ page.url }}{{ block.image }}" alt="{{ block.title }}">
+          <figcaption>{{ block.text }}</figcaption>
+        </figure>
+        
+        {% else %}
+
+          <p><strong>{{ block.text }}</strong></p>
+
+        {% endif %}
+
+      </div>
+        
+
+
+      {% endcase %}
+
+  </div>
+  {% endfor %}
+
+</div>
+
+<!-- End block wrapper -->
+
+{% endif %}
