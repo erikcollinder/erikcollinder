@@ -6,3 +6,4 @@ date: 2015-08-01
 ---
 
 ![Dancing weirdoes]({{ site.url }}/images/dancing.gif)
+ 

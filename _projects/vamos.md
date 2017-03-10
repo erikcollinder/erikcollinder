@@ -13,7 +13,7 @@ table:
 
 ---
 
-# Just a fine ass day
+Vamos was acquired by FanMiles in April 2016
 
 ![Dancing weirdoes]({{ site.url }}/images/dogsandbev.gif)
 
