@@ -1,12 +1,8 @@
 ---
-title: Hire
+title: Contact + Hire
 layout: default
 order: 5
 ---
-
-# How and why to hire me
-
-Everything you ever need to know to hire me.
 
 ## Contact Info
 
@@ -17,6 +13,10 @@ The most important piece of information you'll need to hire me, is contact info.
 
 {{site.phone}}
 <small>iMessage also works</small>
+
+
+# Good reasons to give me a shout
+
 
 ## Approach
 
