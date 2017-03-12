@@ -3,7 +3,11 @@
 <ul class="project-list">
     {% for project in sorted_projects %}
       <li>
+      	<figure>
+			<img src="{{ project.url | prepend: site.baseurl }}{{ project.primary-graphic }}" alt="">
+		</figure>
         <span class="post-meta">{{ project.subtitle }}</span>
+		
 
         <h2>
           <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
