@@ -15,3 +15,5 @@ collections:
   uploads:
     title: Uploads
     output: true
+sass:
+  style: compressed
