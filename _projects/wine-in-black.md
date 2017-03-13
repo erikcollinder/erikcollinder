@@ -3,6 +3,7 @@ title: Wine in Black and Evino
 primary-graphic: header-wineinblack.png
 graphics:
   - primary: header-wineinblack.png
+    color: black;
   - opengraph: opengraph-wineinblack.png
 subtitle: iOS App and Website
 description: When I first started out working with Wine in Black my team was briefed with designing, develop and launching the next generation wine purchasing App. What we released wasn't just a shop in the App Store but arguably the fastest and easiest way to purchase wine.

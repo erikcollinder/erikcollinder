@@ -1,7 +1,9 @@
 ---
 title: Vamos, The Event Guide
 subtitle: Co-Founding and Art Direction
-primary-graphic: vamos-header.png
+graphics:
+  - primary: vamos-header.png
+    color: "#eb6124"
 roles:
    - Co-Founding
    - Interaction Design
