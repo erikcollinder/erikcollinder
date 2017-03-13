@@ -4,39 +4,40 @@ layout: default-unwrapped
 
 <article class="post">
 
-  <header class="project-header layout-wrapper">
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.subtitle }}</h2>
+  <header class="project-header">
+    <div class="layout-wrapper">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.subtitle }}</h2>
 
-    {% if page.roles %}
+      {% if page.roles %}
 
-    <ul>
+      <ul>
 
-      {% for role in page.roles %}
-      <li>{{ role }}</li>
+        {% for role in page.roles %}
+        <li>{{ role }}</li>
+        {% endfor %}
+
+      </ul>
+
+      {% endif %}
+
+    </dl>
+
+    <p class="description">
+      {{ page.description }}
+    </p>
+
+    {% if page.table %}
+
+    <dl>
+      {% for row in page.table %}
+      <dt>{{ row.key | markdownify }}</dt>
+      <dd>{{ row.value | markdownify }}</dd>
       {% endfor %}
-
-    </ul>
+    </dl>
 
     {% endif %}
-
-  </dl>
-
-  <p class="description">
-    {{ page.description }}
-  </p>
-
-  {% if page.table %}
-
-  <dl>
-    {% for row in page.table %}
-    <dt>{{ row.key }}</dt>
-    <dd>{{ row.value }}</dd>
-    {% endfor %}
-  </dl>
-
-  {% endif %}
-
+  </div>
 </header>
 
 <div class="layout-wrapper post-content">
