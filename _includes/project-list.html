@@ -1,17 +1,32 @@
 {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
 
 <ul class="project-list">
-    {% for project in sorted_projects %}
-      <li>
-      	<figure>
-			<img src="{{ project.url | prepend: site.baseurl }}{{ project.primary-graphic }}" alt="">
-		</figure>
-        <span class="post-meta">{{ project.subtitle }}</span>
-		
+  {% for project in sorted_projects %}
+  <!-- This tiny snippet targets the first item "0" in the graphics array -->
+  {% assign image = project.graphics[0] %}
 
-        <h2>
-          <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+  <div class="project-item layout-column">
+    <li style=" background: {{ image.color }}">
+     <figure>
+       
+
+       
+       <img src="{{ project.url | prepend: site.baseurl | append: image.primary }}" alt="">
+
+       <figcaption>
+        {% for graphic in project.graphics %}
+      
+        {% endfor %}
+
+      </figcaption>
+    </figure>
+    <span class="post-meta">{{ project.subtitle }}</span>
+
+
+    <h2>
+      <a class="post-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
+    </h2>
+  </li>
+</div>
+{% endfor %}
 </ul>
