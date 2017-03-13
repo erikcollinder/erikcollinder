@@ -1,28 +1,51 @@
-/**
- * Wrapper
- */
+/* Top, top level
+====================================== */
 
-
-.layout-wrapper {
+html { background-color: #EAECF4; }
+body {
     max-width: $content-width;
+    margin: 0 auto 0 auto;
+}
+
+/* Rows and Columns
+====================================== */
+
+// The layout row must always reach edge to edge
+
+.layout-row {
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $space-small/2;
+    padding-left: $space-small/2;
     @extend %clearfix;
+
+    @include breakpoint($medium-up) {
+        padding-right: $space-medium/2;
+        padding-left: $space-large/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-large/2;
+        padding-left: $space-large/2;  
+    }
 }
+
+// Everything must sit inside a layout column, otherwise the gutters won't line up
 
 .layout-column {
-    padding-left: $spacing-unit/2;
-    padding-right: $spacing-unit/2;
-}
+    //float: left;
+    padding-left: $space-small/2;
+    padding-right: $space-small/2;
 
-// This is just an idea
+    @include breakpoint($medium-up) {
+        padding-right: $space-medium/2;
+        padding-left: $space-large/2;  
+    }
 
-.layout-wrapper-full {
-    max-width: 0;
-    margin: 0;
-    padding: 0;
+    @include breakpoint($large-up) {
+        padding-right: $space-large;
+        padding-left: $space-large;  
+    }
 }
 
 
@@ -38,94 +61,71 @@
     }
 }
 
-
-
 /**
- * Site header
+ * Non-jumping images
  */
 
-
-
-.site-header {
-    background-color: #FFF89A;
-    min-height: 56px;
+.img-container {
+  position: relative;
+  padding-bottom: 56%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+}
+ 
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.site-title {
-    font-size: $base-font-size;
-    font-weight: 500;
-    line-height: 56px;
-    margin-bottom: 0;
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
-
-.site-nav {
-    
-    line-height: 36px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        &.active {
-            color: red;
-        }
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
+img.responsive-image {
+    width: 100%;
 }
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top:    $space-medium;
+    padding-bottom: $space-medium;
+    
+    .layout-column:before {
+        display: block;
+        content: " ";
+        border-top: 1px dotted $grey-color-light;
+        position: relative;
+        top: -$space-medium;
+    }
 }
 
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    margin-left: -$space-medium / 2;
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    margin-bottom: $space-medium / 2;
+    padding-left: $space-medium / 2;
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(35% - (#{$space-medium} / 2));
+    width:         calc(35% - (#{$space-medium} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(20% - (#{$space-medium} / 2));
+    width:         calc(20% - (#{$space-medium} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(45% - (#{$space-medium} / 2));
+    width:         calc(45% - (#{$space-medium} / 2));
 }
 
 
@@ -134,7 +134,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $space-medium 0;
 }
 
 .project-list, .post-list {
@@ -142,12 +142,12 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: $space-medium;
     }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
     color: $grey-color;
 }
 
@@ -166,11 +166,11 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $space-medium;
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $space-medium;
 
     h2 {
         font-size: 32px;

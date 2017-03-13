@@ -4,7 +4,7 @@
   
   {% for block in page.blocks %}
 
-    <div class="block-item {{ block.layout }}">
+    <div class="block-item {{ block.layout }} layout-row">
     
     {% case block.layout %}
 
@@ -23,13 +23,13 @@
 
       <!-- Default Layout -->
       
-      <div class="layout-wrapper">
+      <div class="layout-column">
         <h2>{{ block.title | markdownify }}</h2>
         
         {% if block.image %}
         
         <figure>
-          <img src="{{ page.url }}{{ block.image }}" alt="{{ block.title }}">
+          <img class="responsive-image" src="{{ page.url | prepend: site.baseurl }}{{ block.image }}" alt="{{ block.title }}">
           <figcaption>{{ block.text }}</figcaption>
         </figure>
         
