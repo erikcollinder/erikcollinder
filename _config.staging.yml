@@ -1,4 +1,5 @@
 ---
+baseurl: /my-website
 title: Staging Collinder
 sass:
   style: nested
