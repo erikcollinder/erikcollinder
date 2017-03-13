@@ -1,12 +1,37 @@
 ---
 title: Design
 permalink: "/design/"
-layout: default
+layout: default-unwrapped
 order: 3
 ---
 
-<div class="design-work">
+{% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+    <div class="layout-row project-list ">
 
-  {% include project-list.html %}
+        {% for project in sorted_projects %}
+        <!-- This tiny snippet targets the first item "0" in the graphics array -->
+        {% assign image = project.graphics[0] %}
+        <div class="project-item">
+            <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
+
+                <div class="layout-column primary-graphic-container">
+                    <figure style=" background: {{ image.color }}">
+                        <div class="img-container">
+                            <img src="{{ project.url | prepend: site.baseurl | append: image.primary }}" alt="">
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="layout-column project-meta">
+
+                    <h2 class="project-title">{{ project.title }}</h2>
+                    <span>{{ project.subtitle }}</span>
+
+                </div>
+
+            </a>
+        </div>
+
+    {% endfor %}
 
 </div>
