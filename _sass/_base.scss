@@ -8,6 +8,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+div {
+    box-sizing: border-box;
+}
 
 /**
  * Basic styling
