@@ -1,0 +1,28 @@
+// Use media queries like this:
+// @include breakpoint($on-palm) {
+//     .wrapper {
+//         padding-right: $spacer-medium / 2;
+//         padding-left: $spacer-medium / 2;
+//     }
+// }
+
+
+$small-up:  28em;
+$medium-up: 40em;
+$large-up:  70em;
+
+
+@mixin breakpoint($size-up) {
+    @media screen and (min-width: $size-up) {
+        @content;
+    }
+}
+
+@mixin resolution {
+  
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) { 
+        @content;
+	}
+}
