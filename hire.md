@@ -8,10 +8,12 @@ order: 5
 
 The most important piece of information you'll need to hire me, is contact info. 
 
-{{site.email}}
-<small>I'll get to you within 24 hours.</small>
+{{site.email}}  
+
+<small>I'll get back to you within 24 hours.</small>
 
 {{site.phone}}
+
 <small>iMessage also works</small>
 
 
