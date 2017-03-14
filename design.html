@@ -6,32 +6,47 @@ order: 3
 ---
 
 {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-    <div class="layout-row project-list ">
 
-        {% for project in sorted_projects %}
+<div class="project-list">
+
+    {% for project in sorted_projects %}
         <!-- This tiny snippet targets the first item "0" in the graphics array -->
-        {% assign image = project.graphics[0] %}
-        <div class="project-item">
-            <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
-
-                <div class="layout-column primary-graphic-container">
-                    <figure style=" background: {{ image.color }}">
-                        <div class="img-container">
-                            <img src="{{ project.url | prepend: site.baseurl | append: image.primary }}" alt="">
-                        </div>
-                    </figure>
-                </div>
-
-                <div class="layout-column project-meta">
-
-                    <h2 class="project-title">{{ project.title }}</h2>
-                    <span>{{ project.subtitle }}</span>
-
-                </div>
-
-            </a>
-        </div>
+    {% assign image = project.graphics[0] %}
+    <div class="project-item layout-row">
+        <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
+            <div class="layout-column primary-graphic-container">
+                <figure style=" background: {{ image.color }}">
+                    <div class="img-container">
+                        <img src="{{ project.url | prepend: site.baseurl | append: image.primary }}" alt="">
+                    </div>
+                </figure>
+            </div>
+            <div class="layout-column project-meta">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <span class="project-subtitle">{{ project.subtitle }}</span>
+            </div>
+        </a>
+    </div>
 
     {% endfor %}
 
 </div>
+
+    <div class="layout-row">
+        <div class="layout-column">
+            <h2>Work to be added</h2>
+        </div>
+    </div>
+    
+    {% for project in sorted_projects %}
+        
+    <div class="project-item layout-row">
+        <a class="project-link" href="{{ project.url | prepend: site.baseurl }}">
+            <div class="layout-column project-meta">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <span class="project-subtitle">{{ project.subtitle }}</span>
+            </div>
+        </a>
+    </div>
+
+{% endfor %}
