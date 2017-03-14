@@ -1,19 +1,92 @@
-/* Project List */ 
 
+
+/* Project List
+======================================*/ 
+
+.project-list {
+	overflow: hidden;
+}
 .project-list img {
     margin: 0 auto;
     width: 100%;
 }
 
-.project-item {
-	margin: $spacing-unit 0;
+.project-link, .project-link:visited {
+	color: $text-color;
 }
 
+.project-item {
+	overflow: hidden;
+	position: relative;
+	
+	.img-container {
+		// In addition to global styles found in _layout.scss
+		padding-bottom: 66.66%; 
+
+		// Larger screens have wider format images, 16:9 in this case
+		@include breakpoint($small-up){ padding-bottom: 56.25%; }
+	
+	}
+
+}
+
+@include smallerthan($small-up){
+	.layout-column.project-meta {
+		padding: $space-small;
+	}
+	
+	.layout-row.project-list,
+	.layout-column.primary-graphic-container {
+		padding: 0px;
+	}
+	
+	.layout-column.project-meta {
+		padding: $space-small;
+	}
+}
+
+
+// Trying to make these titles a global
+
+.project-title {font-weight: 700;}
+.project-subtitle {font-weight: 300;}
+
+.project-title, 
+.project-subtitle {
+	font-size: $font-size-medium;
+	line-height: 24px;
+
+	@include breakpoint($medium-up){
+		font-size: 19px;
+		line-height: 26px;
+	}
+}
+
+// Layout breakpoint where we switch to 1:3 layout
+
 @include breakpoint($medium-up){
-	.project-item {
-		width: 50%;
-		float: left;
-	} 
+	.project-item figure {
+		width: 68%;
+		float: right;
+	}
+
+	.project-meta {
+		//padding-top: $space-medium;
+		padding-right: $space-medium;
+		margin-right: $space-medium;
+		overflow: auto;
+		position: relative;
+		
+		// Border on top
+		.project-title:before {
+			padding-top: $space-medium;
+		}
+		.project-title:before {
+			content: " ";
+			display: block;
+			border-top: 1px solid $grey-color-light;
+		}
+	}
 }
 
 /* Project Page */ 
@@ -28,4 +101,21 @@ dt {
 
 dd {
 	float: right;
+}
+
+.note {
+	padding-top: $space-large;
+	padding-bottom: $space-large;
+}
+
+.note.under-construction {
+	background: #F4E66D;
+}
+
+
+/* Next Previous */ 
+
+.next-prev {
+	padding-top: $space-large*2;
+	padding-bottom: $space-large*2;
 }
