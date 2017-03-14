@@ -30,6 +30,7 @@ blocks:
     text: I just loooooove the forrest
   - image: cellar.jpg
   - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo varius massa, quis rhoncus enim viverra vel. Fusce vehicula mi quis felis pretium vel eleifend est mattis. Pellentesque cursus scelerisque arcu, volutpat venenatis augue dictum id.
+underconstruction: true
 ---
 
 Vamos was acquired by FanMiles in April 2016
