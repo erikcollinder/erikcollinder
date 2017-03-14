@@ -6,6 +6,5 @@ graphics:
     color: "#DCCCAB"
 layout: project
 date: 2012-03-09
+underconstruction: true
 ---
-
-![Dancing weirdoes]({{ site.url }}/images/dancing.gif)

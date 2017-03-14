@@ -1,5 +1,5 @@
 ---
-title: Acapulco Logo
+title: Acapulco
 subtitle: Logo Design
 graphics:
   - primary: thumb.jpg
