@@ -4,13 +4,15 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Basic Gothic Pro", "ff-basic-gothic-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
+$base-font-family: "ff-basic-gothic-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-medium:   18px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$font-size-small:  $font-size-medium * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     22px;
+$space-small:     14px;
+$space-medium:     22px;
+$space-large:    44px;
 
 
 // Colours
@@ -20,11 +22,11 @@ $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    1000px;
+$content-width:    1280px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -35,6 +37,7 @@ $on-laptop:        800px;
         "breakpoints",
         "base",
         "layout",
+        "header",
         "project",
         "blocks",
         "syntax-highlighting"
