@@ -1,0 +1,60 @@
+/**
+ * Site header
+ */
+
+.site-header {
+    padding-top: $space-large;
+    min-height: 146px;
+
+    @include smallerthan($medium-up) {
+        background-color: #e4e5eb;
+    }
+}
+
+.site-title {
+    font-size: $font-size-medium;
+    font-weight: 500;
+    line-height: 56px;
+    margin-bottom: 0;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.site-nav {
+    
+    line-height: 36px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        &.active {
+            color: red;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 20px 0 0;
+        
+        @include breakpoint($medium-up){
+            margin: 0 0 0 20px;
+        }
+    }
+    
+    @include breakpoint($medium-up){
+        float: right;
+    }
+}
