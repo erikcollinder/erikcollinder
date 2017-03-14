@@ -4,8 +4,8 @@ layout: default-unwrapped
 
 <article class="post">
 
-  <header class="project-header">
-    <div class="layout-wrapper">
+  <header class="project-header layout-row">
+    <div class="layout-column">
       <h1>{{ page.title }}</h1>
       <h2>{{ page.subtitle }}</h2>
 
@@ -21,7 +21,6 @@ layout: default-unwrapped
 
       {% endif %}
 
-    </dl>
 
     <p class="description">
       {{ page.description }}
@@ -40,16 +39,24 @@ layout: default-unwrapped
   </div>
 </header>
 
-<div class="layout-wrapper post-content">
-  {{ content }}
-</div>
-
-
-<!-- Content Blocks Start if available-->
+<!-- Content Blocks Start -->
 
 {% include blocks.html %}
 
-<!-- Content Blocks Ends -->
+<!-- Free style content for the bottom of the page -->
 
+{% if page.underconstruction == true %}
+  {% include underconstruction.html %}
+{% endif %}
+
+<div class="post-content layout-row">
+  <div class="layout-column">
+    {{ content }}
+  </div>
+</div>
+
+<!-- Next project -->
+
+{% include nextprev.html %}
 
 </article>

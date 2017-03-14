@@ -8,8 +8,10 @@
     {% include header.html %}
 
     <div class="page-content">
-      <div class="layout-wrapper">
-        {{ content }}
+      <div class="layout-row" id="{{ page.id }}">
+        <div class="layout-column">
+          {{ content }}
+        </div>
       </div>
     </div>
 
