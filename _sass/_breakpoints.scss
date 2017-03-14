@@ -8,12 +8,18 @@
 
 
 $small-up:  28em;
-$medium-up: 40em;
+$medium-up: 48em;
 $large-up:  70em;
 
 
 @mixin breakpoint($size-up) {
     @media screen and (min-width: $size-up) {
+        @content;
+    }
+}
+
+@mixin smallerthan($size) {
+    @media screen and (max-width: $size) {
         @content;
     }
 }
