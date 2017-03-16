@@ -1,5 +1,4 @@
 namespace :serve do
-  task :default => :local
   
   desc 'Serve site to devices in network'
   task :local do
@@ -18,4 +17,8 @@ namespace :serve do
     sh "JEKYLL_ENV=production jekyll serve --config=_config.yml,_config.production.yml"
   end
 
+end
+
+task :serve do
+  Rake::Task['serve:local'].invoke
 end
