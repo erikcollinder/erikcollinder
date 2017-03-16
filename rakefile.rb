@@ -2,7 +2,7 @@ namespace :serve do
   
   desc 'Serve site to devices in network'
   task :local do
-    puts "I'm meant to be serving site to devices in network"
+    puts "Serving site to devices in network"
     status = system("jekyll serve --host 0.0.0.0")
     puts status ? "Success" : "Failed"
   end
