@@ -1,0 +1,202 @@
+/* Top, top level
+====================================== */
+
+html { background-color: $background-color; }
+body {
+    max-width: $content-width;
+    margin: 0 auto 0 auto;
+}
+
+/* Rows and Columns
+====================================== */
+
+// The layout row must always reach edge to edge
+
+.layout-row {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:    $space-small/2;
+    padding-right:  $space-small/2;
+    padding-bottom: $space-small/2;
+    padding-left:   $space-small/2;
+    @extend %clearfix;
+
+    @include breakpoint($medium-up) {
+        padding-top:    $space-medium/2;  
+        padding-right:  $space-medium/2;
+        padding-bottom: $space-medium/2;  
+        padding-left:   $space-medium/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-large/2;
+        padding-left: $space-large/2;  
+    }
+}
+
+// Everything must sit inside a layout column, otherwise the gutters won't line up
+
+.layout-column {
+    //float: left;
+    padding-left: $space-small/2;
+    padding-right: $space-small/2;
+
+    @include breakpoint($medium-up) {
+        padding-right: $space-medium/2;
+        padding-left: $space-large/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-large;
+        padding-left: $space-large;  
+    }
+}
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+ * Non-jumping images
+ */
+
+.img-container {
+  position: relative;
+  padding-bottom: 56%; /* ratio of image height to width */
+  height: 0;
+  overflow: hidden;
+}
+ 
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+img.responsive-image {
+    width: 100%;
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    padding-top:    $space-medium;
+    padding-bottom: $space-medium;
+    
+    .layout-column:before {
+        display: block;
+        content: " ";
+        border-top: 1px dotted $grey-color-light;
+        position: relative;
+        top: -$space-medium;
+    }
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$space-medium / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $space-medium / 2;
+    padding-left: $space-medium / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$space-medium} / 2));
+    width:         calc(35% - (#{$space-medium} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$space-medium} / 2));
+    width:         calc(20% - (#{$space-medium} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$space-medium} / 2));
+    width:         calc(45% - (#{$space-medium} / 2));
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $space-medium 0;
+}
+
+.project-list, .post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $space-medium;
+    }
+}
+
+.post-meta {
+    font-size: $font-size-small;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+    color: red;
+    &:visited {
+        color: red;
+    }
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $space-medium;
+}
+
+.post-content {
+    margin-bottom: $space-medium;
+
+    h2 {
+        font-size: 32px;
+
+        @include breakpoint($medium-up) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include breakpoint($medium-up) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include breakpoint($medium-up) {
+            font-size: 18px;
+        }
+    }
+}
