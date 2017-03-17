@@ -12,14 +12,14 @@ order: 1
 	
 	<article class="column-left">
 		{% assign foo = site.projects | where:"title", "Wine in Black" | first %}
-		<img src="/uploads/wine-in-black/header-wineinblack.png" width="1280" height="600" alt="">
+		<img src="/uploads/{{foo.slug}}/header-wineinblack.png" width="1280" height="600" alt="">
 		<h3><a href="{{foo.url}}">{{ foo.title }}</a></h3>
 		<p>{{ foo.description }}</p>
 	</article>
 
 	<article class="column-left">
 		{% assign foo = site.projects | where:"title", "Vamos, The Event Guide" | first %}
-		<img src="/uploads/vamos-header.png" width="1280" height="600" alt="">
+		<img src="/uploads/{{foo.slug}}/vamos-header.png" width="1280" height="600" alt="">
 		<h3><a href="{{foo.url}}">{{ foo.title }}</a></h3>
 		<p>{{ foo.description }}</p>
 	</article>
@@ -27,14 +27,14 @@ order: 1
 
 	<article class="column-left">
 		{% assign foo = site.projects | where:"title", "Google Web Lab Installation" | first %}
-		<img src="/upload	s/{{foo.slug}}/1280-web-lab.jpg" width="1280" height="600" alt="">
+		<img src="/uploads/{{foo.slug}}/1280-web-lab.jpg" width="1280" height="600" alt="">
 		<h3><a href="{{foo.url}}">{{ foo.title }}</a></h3>
 		<p>{{ foo.description }}</p>
 	</article>
 	
 	<article class="column-left">
 		{% assign foo = site.projects | where:"title", "Mercedes-Benz Forgotten Roadtrip" | first %}
-		<img src="/uploads/header-generic.jpg" width="1280" height="600" alt="">
+		<img src="/uploads/{{foo.slug}}/header-generic.jpg" width="1280" height="600" alt="">
 		<h3><a href="{{foo.url}}">{{ foo.title }}</a></h3>
 		<p>{{ foo.description }}</p>
 	</article>
