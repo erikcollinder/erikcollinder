@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erik Collinder</title>
+    <description></description>
+    <link>http://0.0.0.0:4000/</link>
+    <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 17 Mar 2017 18:46:05 +0000</pubDate>
+    <lastBuildDate>Fri, 17 Mar 2017 18:46:05 +0000</lastBuildDate>
+    <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>I'm a new post</title>
+        <description>&lt;p&gt;&lt;em&gt;Hi again&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 02 Mar 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2017/03/02/im-a-new-post.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/03/02/im-a-new-post.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Let's do it then</title>
+        <description>&lt;p&gt;What’s happening. hi&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2017/01/19/lets-do-it-then.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2017/01/19/lets-do-it-then.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The Business and Art of Design</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;Is boredom at the heart of the problem?&lt;/li&gt;
+  &lt;li&gt;Do we accept a more creative design because&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Creative&lt;/td&gt;
+      &lt;td&gt;Analytical&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Stupid&lt;/td&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Making&lt;/td&gt;
+      &lt;td&gt;Critique&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Restless&lt;/td&gt;
+      &lt;td&gt;Boredom&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Chaos&lt;/td&gt;
+      &lt;td&gt;Structure&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Keyword: Predictability&lt;/p&gt;
+</description>
+        <pubDate>Fri, 19 Aug 2016 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2016/08/19/design-art-and-business.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2016/08/19/design-art-and-business.html</guid>
+        
+        <category>design</category>
+        
+        <category>business</category>
+        
+        <category>thinking</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Image post</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/uploads/2016-04-21%2011.06.55.png&quot; alt=&quot;2016-04-21 11.06.55.png&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Apr 2016 17:15:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000/2016/04/24/image-post.html</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000/2016/04/24/image-post.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

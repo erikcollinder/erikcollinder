@@ -1,19 +1,22 @@
 ---
 title: Erik Collinder
-subtitle: Designer
-email: collinder.erik@gmail.com
-phone: +49 157 92347590
 timezone: UTC
 collections:
   posts:
     title: Posts
     output: true
+<<<<<<< HEAD
   projects:
     title: Projects
     output: true
     permalink: "/:collection/:path/"
+=======
+>>>>>>> gh-pages
   uploads:
     title: Uploads
     output: true
+subtitle: Designer
+email: collinder.erik@gmail.com
+phone: "+49 157 92347590"
 sass:
   style: compressed
