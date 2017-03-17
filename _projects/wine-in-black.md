@@ -2,11 +2,11 @@
 title: Wine in Black
 subtitle: iOS App and Website for wine retailer
 layout: project
+description: "When I first started out working with Wine in Black my team was briefed with designing, develop and launching the next generation wine purchasing App. What we released wasn't just a shop in the App Store but arguably the fastest and easiest way to purchase wine."
 graphics:
   - primary: header-wineinblack.png
     color: black
   - opengraph: opengraph-wineinblack.png
-description: When I first started out working with Wine in Black my team was briefed with designing, develop and launching the next generation wine purchasing App. What we released wasn't just a shop in the App Store but arguably the fastest and easiest way to purchase wine.
 date: 2017-03-09
 roles: [Product Design, iOS Strategy & Design, Web Design]
 table:
@@ -21,17 +21,34 @@ table:
   - key: Web Developer
     value: Ben Lau
 blocks:
+
+# Comment test
+
   - title: The best wines only, available to order or re-order
     text: This is the heart of berlin based Wine in Black. A team of experts sample hundreds of bottles of wine — they have the best job in the world — and selects only a few for the shop.
-  - title: User Testing
+  
+  - image: 2015-11-25 14.26.13.jpg
+    text: This is a meeting 
+
+  - text: User Testing
+    image: usertesting.jpg
+
+
+# comment test
+
+  - image: 2015-11-27_16.53.11.jpg
+    text: On the last day of the design sprint the users are invited.
+
   - title: Search
-  - title: Mountains
-    image: mountains.jpg
+
     text: These mountains are the most amazing things I've ever seen.
   - title: Catalogue to detail view transition
+
   - title: List view
+
   - title: iPad Catalogue, containing Sets
+
   - title: Prototypes
 underconstruction: true
----
 
+---
