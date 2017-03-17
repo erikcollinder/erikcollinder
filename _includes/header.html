@@ -4,9 +4,9 @@
 
     <div class="layout-column">
     
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}: {{ site.subtitle }}</a>
+    <a class="site-title" style="display: none" href="{{ site.baseurl }}/">{{ site.title }}: {{ site.subtitle }}</a>
 
-    <nav class="site-nav">
+    <nav class="site-nav" style="display: none">
   
     {% assign sorted_nav = site.pages | sort: 'order' %}
 
