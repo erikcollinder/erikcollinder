@@ -1,7 +1,7 @@
 /* Top, top level
 ====================================== */
 
-html { background-color: #EAECF4; }
+html { background-color: $background-color; }
 body {
     max-width: $content-width;
     margin: 0 auto 0 auto;
