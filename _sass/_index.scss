@@ -1,0 +1,30 @@
+.section-heading {
+	//font-feature-settings: "smcp";
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 0.1em;
+	border-bottom: 1px solid $text-color;
+}
+
+article img { height: auto; }
+
+article p {
+	font-size: 14px;
+}
+
+article h3 {
+	margin-top: $space-medium;
+}
+
+.content-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column-left {
+
+	@include breakpoint($medium-up){
+		width: 50%;
+		padding: 0 1em;
+	}
+}
