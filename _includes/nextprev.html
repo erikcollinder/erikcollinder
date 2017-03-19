@@ -1,0 +1,22 @@
+<div class="next-prev layout-row">
+
+<div class="layout-column">
+  
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">
+
+    <small>Next</small>
+    <h2 class="project-title">{{page.next.title}}</h2>
+      <p class="subtitle">{{page.next.subtitle}}</p>
+    </a>
+  {% endif %}
+
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">
+    	<small>Previous</small>
+      <h2 class="project-title">{{page.previous.title}}</h2>
+      <p class="subtitle">{{page.previous.subtitle}}</p>
+    </a>
+  {% endif %}
+</div>
+</div>
