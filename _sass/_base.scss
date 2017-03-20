@@ -93,7 +93,7 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: $font-size-medium;
 }
 
 
@@ -121,7 +121,6 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $space-medium / 2;
-    font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
 
