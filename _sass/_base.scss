@@ -27,8 +27,6 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -57,6 +55,11 @@ img {
 figure > img {
     display: block;
 }
+
+picture {
+    display: block;
+}
+
 
 figcaption {
     font-size: $font-size-small;
