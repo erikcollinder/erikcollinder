@@ -8,7 +8,7 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-article, div {
+img, article, div {
     box-sizing: border-box;
 }
 
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: $font-size-large;
 }
 
 h2 {
