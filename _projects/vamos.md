@@ -22,15 +22,7 @@ table:
 blocks:
   - image: Hovering-Paper-Test.jpg
     layout: full
-  - title: So *much* has happened since
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo varius massa, quis rhoncus enim viverra vel. Fusce vehicula mi quis felis pretium vel eleifend est mattis. Pellentesque cursus scelerisque arcu, volutpat venenatis augue dictum id.
-  - title: First block
-    image: dessert.jpg
-  - title: Second block
-    image: forrest.jpg
-    text: I just loooooove the forrest
-  - image: cellar.jpg
-  - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo varius massa, quis rhoncus enim viverra vel. Fusce vehicula mi quis felis pretium vel eleifend est mattis. Pellentesque cursus scelerisque arcu, volutpat venenatis augue dictum id.
+  - text: Vamos was acquired by FanMiles in April 2016
 underconstruction: true
 ---
 
