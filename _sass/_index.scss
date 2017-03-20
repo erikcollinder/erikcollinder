@@ -1,19 +1,10 @@
 .section-heading {
 	//font-feature-settings: "smcp";
 	text-transform: uppercase;
-	font-size: 13px;
+	font-size: $font-size-small;
 	letter-spacing: 0.1em;
-	border-bottom: 1px solid $text-color;
-}
-
-article img { height: auto; }
-
-article p {
-	font-size: 14px;
-}
-
-article h3 {
-	margin-top: $space-medium;
+	border-bottom: 1px dashed #ccc;
+	font-weight: 500;
 }
 
 .flex-columns {
