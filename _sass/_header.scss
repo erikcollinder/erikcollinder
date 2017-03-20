@@ -3,12 +3,10 @@
  */
 
 .site-header {
-    padding-top: $space-large;
+    background: turquoise;
+    padding-top: 30vh;
     min-height: 146px;
-
-    @include smallerthan($medium-up) {
-        background-color: #e4e5eb;
-    }
+    //height: 60vh;
 }
 
 .site-subtitle {
@@ -24,7 +22,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: $text-color;
     }
 }
 
