@@ -1,6 +1,6 @@
 ---
 title: Updates
-layout: default
+layout: default-wrapped
 order: 4
 ---
 
