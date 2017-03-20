@@ -1,11 +1,18 @@
 {% if page.blocks %}
 
 <div class="block-wrapper">
-  
+
   {% for block in page.blocks %}
 
     <div class="block-item {{ block.layout }} layout-row">
     
+    <!-- Tells jekyll where the images are at -->
+  
+    {% capture image_url %}
+    /uploads/{{ page.slug }}/{{ block.image }}
+    {% endcapture %}
+  
+
     {% case block.layout %}
 
       {% when "full" %}
@@ -15,7 +22,7 @@
         <h2>{{ block.title }}</h2>
         
         <figure>
-          <img src="/uploads/{{ page.slug }}/{{ block.image }}" alt="{{ block.title }}">
+          <img src="{{ block.image_url }}" alt="{{ block.title }}">
           <figcaption>{{ block.text }}</figcaption>
         </figure>
 
@@ -28,8 +35,10 @@
         
         {% if block.image %}
         
+        
+
         <figure>
-          <img class="responsive-image" src="{{ page.url | prepend: site.baseurl }}{{ block.image }}" alt="{{ block.title }}">
+          <img class="responsive-image" src="{{ image_url }}" alt="{{ block.title }}">
           <figcaption>{{ block.text }}</figcaption>
         </figure>
         
