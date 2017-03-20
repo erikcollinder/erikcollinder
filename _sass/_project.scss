@@ -4,6 +4,9 @@
 .project-list {
 	overflow: hidden;
 }
+
+// Image treatment 
+
 .project-list img {
     margin: 0 auto;
     width: 100%;
@@ -11,6 +14,23 @@
 
 .project-link, .project-link:visited {
 	color: $text-color;
+}
+
+.project-link-area {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+// Hover states
+
+.project-link-area:hover{
+	&~p {color: red; }
+	&~h3 {color: red; }
+	&~img {border: 2px red solid; }
 }
 
 .project-item {
