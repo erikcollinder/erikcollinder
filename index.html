@@ -3,99 +3,103 @@ title: Intro
 layout: default
 order: 1
 ---
-<h2 class="section-heading">Selected Work</h2>
-<div class="content-columns">
-	
-	
+
+<!-- Project list -->
+
+<div class="layout-row project-list">
+	<div class="layout-column">
+		<h2 class="section-heading">Selected Work</h2>
+	</div>
 	<article class="project-item layout-column">
-		<a class="project-link-area" href="{{foo.url}}"></a>
 		{% assign foo = site.projects | where:"title", "Wine in Black" | first %}
+		<a class="project-link-area" href="{{foo.url}}"></a>
 		<img src="/uploads/{{foo.slug}}/header-wineinblack.png" width="1280" height="600" alt="">
 		<h3 class="project-title">{{ foo.title }}</h3>
 		<p>{{ foo.description }}</p>
 	</article>
 
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
+	<article class="project-item layout-column">
 		{% assign foo = site.projects | where:"title", "Vamos, The Event Guide" | first %}
+		<a class="project-link-area" href="{{foo.url}}"></a>
 		<img src="/uploads/{{foo.slug}}/vamos-header.png" width="1280" height="600" alt="">
 		<h3 class="project-title">{{ foo.title }}</h3>
 		<p>{{ foo.description }}</p>
 	</article>
 	
 
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
+	<article class="project-item layout-column">
 		{% assign foo = site.projects | where:"title", "Google Web Lab Installation" | first %}
+		<a class="project-link-area" href="{{foo.url}}"></a>
 		<img src="/uploads/{{foo.slug}}/1280-web-lab.jpg" width="1280" height="600" alt="">
 		<h3 class="project-title">{{ foo.title }}</h3>
 		<p>{{ foo.description }}</p>
 	</article>
 	
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
+	<article class="project-item layout-column">
 		{% assign foo = site.projects | where:"title", "Mercedes-Benz Forgotten Roadtrip" | first %}
+		<a class="project-link-area" href="{{foo.url}}"></a>
 		<img src="/uploads/{{foo.slug}}/header-generic.jpg" width="1280" height="600" alt="">
 		<h3 class="project-title">{{ foo.title }}</h3>
 		<p>{{ foo.description }}</p>
 	</article>
-
 </div>
 
-<hr>
-<div class="content-columns">
-	<div class="column-left">
-		<h2>Clients you'll recognise</h2>
+<!-- Written content -->
 
-		<ul>
-			{% for client in site.data.clients %}
+<div class="layout-row">
+	<div class="layout-column">
+			<h2>Clients you'll recognise</h2>
 
-			<li>{{ client.name}}</li>
+			<ul>
+				{% for client in site.data.clients %}
+
+				<li>{{ client.name}}</li>
+
+				{% endfor %}
+			</ul>
+	</div>
+
+	<div class="layout-column">
+			<h2>Clients close to my heart</h2>
+
+			<ul>
+				<li>Vamos</li>
+				<li>B-Reel</li>
+				<li>Wine in Black</li>
+				<li>Evino</li>
+				<li>Sean Williams</li>
+			</ul>
+	</div>
+
+	
+	<!-- Work friends -->
+	<div class="layout-column">
+		<h2>Work friends that will vouch for me</h2>
+
+		<dl>
+			{% for friend in site.data.friends %}
+
+			<dt>{{ friend.name}}</dt>
+			<dd>{{ friend.title}} at {{ friend.company }}</dd>
 
 			{% endfor %}
-		</ul>
+
+		</dl>
 	</div>
-	<div class="column-left">
-		<h2>Clients close to my heart</h2>
+	<!-- Work friends -->
+	<div class="layout-column">
+		<h2>Expericence</h2>
+		<p>TL;DR • </p>
+	
+	
 
-		<ul>
-			<li>Vamos</li>
-			<li>B-Reel</li>
-			<li>Wine in Black</li>
-			<li>Evino</li>
-			<li>Sean Williams</li>
-		</ul>
+		<dl>
+			{% for milestone in site.data.origins %}
+
+			<dt>{{ milestone.title}}</dt>
+			<dd>{{ milestone.description }}</dd>
+
+			{% endfor %}
+		</dl>
 	</div>
-</div>
-
-<hr>
-
-<h2>Work friends that will vouch for me</h2>
-
-<dl>
-	{% for friend in site.data.friends %}
-	
-	<dt>{{ friend.name}}</dt>
-	<dd>{{ friend.title}} at {{ friend.company }}</dd>
-
-	{% endfor %}
-
-</dl>
-
-<hr>
-
-<h2>Expericence</h2>
-<p>TL;DR • </p>
-
-<div class="column-left">
-
-<dl>
-	{% for milestone in site.data.origins %}
-	
-	<dt>{{ milestone.title}}</dt>
-	<dd>{{ milestone.description }}</dd>
-
-	{% endfor %}
-</dl>
-
 </div>
