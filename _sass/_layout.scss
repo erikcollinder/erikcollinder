@@ -29,8 +29,8 @@ body {
     }
 
     @include breakpoint($large-up) {
-        padding-right: $space-large/2;
-        padding-left: $space-large/2;  
+        padding-right: $space-large;
+        padding-left: $space-large;  
     }
 }
 
@@ -38,17 +38,46 @@ body {
 
 .layout-column {
     //float: left;
+    position: relative;
     padding-left: $space-small/2;
     padding-right: $space-small/2;
 
     @include breakpoint($medium-up) {
         padding-right: $space-medium/2;
-        padding-left: $space-large/2;  
+        padding-left: $space-medium/2;  
     }
 
     @include breakpoint($large-up) {
-        padding-right: $space-large;
-        padding-left: $space-large;  
+        padding-right: $space-medium;
+        padding-left: $space-medium;  
+    }
+}
+
+.layout-tile {
+    @include breakpoint($medium-up){
+        width: 50%;
+        float: left;
+    }
+}
+
+.layout-right {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: right;
+    }
+}
+
+.layout-left {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: left;
+    }
+}
+
+.layout-aside {
+    @include breakpoint($medium-up) {
+        width: 30%;
+        float: left;
     }
 }
 
@@ -71,7 +100,6 @@ body {
 
 .img-container {
   position: relative;
-  padding-bottom: 56%; /* ratio of image height to width */
   height: 0;
   overflow: hidden;
 }
@@ -157,7 +185,7 @@ img.responsive-image {
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: $font-size-medium;
     color: red;
     &:visited {
         color: red;
@@ -177,26 +205,26 @@ img.responsive-image {
     margin-bottom: $space-medium;
 
     h2 {
-        font-size: 32px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 28px;
+            font-size: $font-size-medium;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 22px;
+            font-size: $font-size-medium;
         }
     }
 
     h4 {
-        font-size: 20px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 18px;
+            font-size: $font-size-medium;
         }
     }
 }

@@ -1,11 +1,18 @@
 {% if page.blocks %}
 
 <div class="block-wrapper">
-  
+
   {% for block in page.blocks %}
 
     <div class="block-item {{ block.layout }} layout-row">
     
+    <!-- Tells jekyll where the images are at -->
+  
+    {% capture image_url %}
+    /uploads/{{ page.slug }}/{{ block.image }}
+    {% endcapture %}
+  
+
     {% case block.layout %}
 
       {% when "full" %}
@@ -15,7 +22,7 @@
         <h2>{{ block.title }}</h2>
         
         <figure>
-          <img src="/uploads/{{ page.slug }}/{{ block.image }}" alt="{{ block.title }}">
+          <img src="{{ block.image_url }}" alt="{{ block.title }}">
           <figcaption>{{ block.text }}</figcaption>
         </figure>
 
@@ -23,16 +30,30 @@
 
       <!-- Default Layout -->
       
-      <div class="layout-column">
-        <h2>{{ block.title | markdownify }}</h2>
+      <div class="">
         
         {% if block.image %}
         
-        <figure>
-          <img class="responsive-image" src="{{ page.url | prepend: site.baseurl }}{{ block.image }}" alt="{{ block.title }}">
-          <figcaption>{{ block.text }}</figcaption>
-        </figure>
-        
+          <div class="layout-column layout-right">
+            
+            <figure>
+              <img class="responsive-image" src="{{ image_url }}" alt="{{ block.title }}">
+            </figure>
+            
+          </div>
+
+          <div class="layout-column layout-aside">
+            
+            {% if block.title %}
+            <h2>{{ block.title | markdownify }}</h2>
+            {% endif %}
+
+            {% if block.text %}
+            <p>{{ block.text }}</p>
+            {% endif %}
+
+          </div>
+
         {% else %}
 
           <p>{{ block.text | markdownify }}</p>

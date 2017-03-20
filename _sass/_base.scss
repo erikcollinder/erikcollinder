@@ -27,14 +27,12 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure, hr,
+ul, ol, dl, hr,
 %vertical-rhythm {
     margin-bottom: $space-medium;
 }
@@ -57,6 +55,11 @@ img {
 figure > img {
     display: block;
 }
+
+picture {
+    display: block;
+}
+
 
 figcaption {
     font-size: $font-size-small;
@@ -89,10 +92,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $font-size-large;
+    line-height: 48px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: $font-size-medium;
+}
+
+h3 {
+    font-weight: 600;
 }
 
 
@@ -120,7 +128,6 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $space-medium / 2;
-    font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
 

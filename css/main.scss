@@ -1,28 +1,28 @@
 ---
 ---
-
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "ff-basic-gothic-web-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "ff-basic-gothic-web-pro", Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Font sizes
 
-$font-size-medium: 17px;
-$font-size-small:  $font-size-medium * 0.875;
+$font-size-medium: 16px;
+$font-size-small:  $font-size-medium * 0.8;
 $font-size-large: $font-size-medium * 2;
 
 $base-font-weight: 400;
 $base-line-height: 1.5;
 
-$space-small:     14px;
-$space-medium:     22px;
-$space-large:    44px;
+// Spacers
+
+$space-small:  12px;
+$space-medium: 24px;
+$space-large:  48px;
 
 
 // Colours
 
-$text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -30,11 +30,12 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-// Width of the content area
-$content-width:    1280px;
+// Colour aliases
+$text-color:       #333;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+// Width of the content area
+
+$content-width:    1280px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -47,3 +48,9 @@ $on-laptop:        800px;
     "project",
     "blocks"
 ;
+
+// Debug styles
+
+.hide {
+	display: none;
+}

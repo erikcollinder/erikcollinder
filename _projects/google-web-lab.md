@@ -10,6 +10,7 @@ roles: [Interaction Design, Identity, Icon Render, Print]
 
 graphics:
   - primary: 1280-web-lab.jpg
+    mobile: 1280-web-lab-mobile.jpg
     color: "#DCCCAB"
 
 # Display 

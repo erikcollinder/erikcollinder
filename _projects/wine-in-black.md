@@ -23,6 +23,7 @@ table:
 
 graphics:
   - primary: header-wineinblack.png
+    mobile: screenshot-1.png
     color: black
   - opengraph: opengraph-wineinblack.png
 date: 2017-03-09
@@ -30,12 +31,14 @@ date: 2017-03-09
 # Display
 
 layout: project
+underconstruction: true
 
 # Blocks
 
 blocks:
 
   - title: The best wines only, available to order or re-order
+    image: app-1.png
     text: This is the heart of berlin based Wine in Black. A team of experts sample hundreds of bottles of wine — they have the best job in the world — and selects only a few for the shop.
   
   - image: 2015-11-25 14.26.13.jpg
@@ -47,6 +50,10 @@ blocks:
   - image: 2015-11-27_16.53.11.jpg
     text: On the last day of the design sprint the users are invited.
 
+---
+
+# Notes 
+
   - title: Search
 
     text: These mountains are the most amazing things I've ever seen.
@@ -57,6 +64,3 @@ blocks:
   - title: iPad Catalogue, containing Sets
 
   - title: Prototypes
-underconstruction: true
-
----

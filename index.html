@@ -3,48 +3,46 @@ title: Intro
 layout: default
 order: 1
 ---
-<h2 class="section-heading">Selected Work</h2>
-<div class="content-columns">
-	
-	
-	<article class="project-item layout-column">
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		{% assign foo = site.projects | where:"title", "Wine in Black" | first %}
-		<img src="/uploads/{{foo.slug}}/header-wineinblack.png" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
 
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		{% assign foo = site.projects | where:"title", "Vamos, The Event Guide" | first %}
-		<img src="/uploads/{{foo.slug}}/vamos-header.png" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
-	
+<!-- Project list -->
 
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		{% assign foo = site.projects | where:"title", "Google Web Lab Installation" | first %}
-		<img src="/uploads/{{foo.slug}}/1280-web-lab.jpg" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
-	
-	<article class="project-item column-left">
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		{% assign foo = site.projects | where:"title", "Mercedes-Benz Forgotten Roadtrip" | first %}
-		<img src="/uploads/{{foo.slug}}/header-generic.jpg" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
+<div class="layout-row project-list">
+	<div class="layout-column">
+		<h2 class="section-heading">Selected Work</h2>
+	</div>
+
+	{% for project in site.projects %}
+		
+	{% capture image_url %}
+	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
+	{% endcapture %}
+
+	{% capture image_url_mobile %}
+	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
+	{% endcapture %}
+
+	<article class="project-item layout-column layout-tile">
+		
+
+		<picture class="img-container">
+			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
+			<img src="{{ image_url_mobile }}" alt="{{ project.title }}" />
+		</picture>
+
+		<h3 class="project-title">{{ project.title }}</h3>
+		<p class="project-subtitle hide">{{ project.roles | join: ", " }}</p>
+
+		<a class="project-link-area" href="{{project.url}}"></a>
+	</article>		
+
+	{% endfor %}
 
 </div>
 
-<hr>
-<div class="content-columns">
-	<div class="column-left">
+<!-- Written content -->
+
+<div class="layout-row">
+	<div class="layout-column layout-tile">
 		<h2>Clients you'll recognise</h2>
 
 		<ul>
@@ -55,7 +53,8 @@ order: 1
 			{% endfor %}
 		</ul>
 	</div>
-	<div class="column-left">
+
+	<div class="layout-column layout-tile">
 		<h2>Clients close to my heart</h2>
 
 		<ul>
@@ -68,34 +67,40 @@ order: 1
 	</div>
 </div>
 
-<hr>
+<!-- Work friends -->
+<div class="layout-row hide">
+	<div class="layout-column">
+		<h2>Work friends that will vouch for me</h2>
 
-<h2>Work friends that will vouch for me</h2>
+		<dl>
+			{% for friend in site.data.friends %}
 
-<dl>
-	{% for friend in site.data.friends %}
-	
-	<dt>{{ friend.name}}</dt>
-	<dd>{{ friend.title}} at {{ friend.company }}</dd>
+			<dt>{{ friend.name}}</dt>
+			<dd>{{ friend.title}} at {{ friend.company }}</dd>
 
-	{% endfor %}
+			{% endfor %}
 
-</dl>
+		</dl>
+	</div>
+</div>
 
-<hr>
+<!-- Experince and origins -->
+<div class="layout-row hide">
 
-<h2>Expericence</h2>
-<p>TL;DR • </p>
+	<div class="layout-column layout-tile">
+		<h2>Expericence</h2>
+		<p>TL;DR • </p>
+	</div>
+	<div class="layout-column layout-tile">
 
-<div class="column-left">
 
-<dl>
-	{% for milestone in site.data.origins %}
-	
-	<dt>{{ milestone.title}}</dt>
-	<dd>{{ milestone.description }}</dd>
+		<dl>
+			{% for milestone in site.data.origins %}
 
-	{% endfor %}
-</dl>
+			<dt>{{ milestone.title}}</dt>
+			<dd>{{ milestone.description }}</dd>
 
+			{% endfor %}
+		</dl>
+	</div>
 </div>
