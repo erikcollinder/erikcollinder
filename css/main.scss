@@ -7,8 +7,8 @@ $base-font-family: "ff-basic-gothic-web-pro", Verdana, "Helvetica Neue", Helveti
 
 // Font sizes
 
-$font-size-medium: 20px;
-$font-size-small:  $font-size-medium * 0.875;
+$font-size-medium: 16px;
+$font-size-small:  $font-size-medium * 0.8;
 $font-size-large: $font-size-medium * 2;
 
 $base-font-weight: 400;
@@ -16,14 +16,13 @@ $base-line-height: 1.5;
 
 // Spacers
 
-$space-small:     14px;
-$space-medium:     22px;
-$space-large:    44px;
+$space-small:  12px;
+$space-medium: 24px;
+$space-large:  48px;
 
 
 // Colours
 
-$text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -32,6 +31,7 @@ $grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Colour aliases
+$text-color:       #333;
 
 // Width of the content area
 
@@ -48,3 +48,9 @@ $content-width:    1280px;
     "project",
     "blocks"
 ;
+
+// Debug styles
+
+.hide {
+	display: none;
+}
