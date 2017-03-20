@@ -12,7 +12,7 @@ order: 1
 	</div>
 
 	{% for project in site.projects %}
-
+		
 	{% capture image_url %}
 	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
 	{% endcapture %}
@@ -29,7 +29,6 @@ order: 1
 			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
 			<img src="{{ image_url_mobile }}" alt="{{ project.title }}" />
 		</picture>
-
 
 		<h3 class="project-title">{{ project.title }}</h3>
 		<span><p>{{ project.roles | join: ", " }}</p></span>
