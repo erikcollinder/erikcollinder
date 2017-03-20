@@ -10,38 +10,18 @@ order: 1
 	<div class="layout-column">
 		<h2 class="section-heading">Selected Work</h2>
 	</div>
-	<article class="project-item layout-column">
-		{% assign foo = site.projects | where:"title", "Wine in Black" | first %}
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		<img src="/uploads/{{foo.slug}}/header-wineinblack.png" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
 
-	<article class="project-item layout-column">
-		{% assign foo = site.projects | where:"title", "Vamos, The Event Guide" | first %}
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		<img src="/uploads/{{foo.slug}}/vamos-header.png" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
-	
+	{% for project in site.projects %}
 
-	<article class="project-item layout-column">
-		{% assign foo = site.projects | where:"title", "Google Web Lab Installation" | first %}
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		<img src="/uploads/{{foo.slug}}/1280-web-lab.jpg" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
-	
-	<article class="project-item layout-column">
-		{% assign foo = site.projects | where:"title", "Mercedes-Benz Forgotten Roadtrip" | first %}
-		<a class="project-link-area" href="{{foo.url}}"></a>
-		<img src="/uploads/{{foo.slug}}/header-generic.jpg" width="1280" height="600" alt="">
-		<h3 class="project-title">{{ foo.title }}</h3>
-		<p>{{ foo.description }}</p>
-	</article>
+	<article class="project-item layout-column layout-tile">
+		<a class="project-link-area" href="{{project.url}}"></a>
+		<img src="/uploads/{{project.slug}}/{{project.graphics[0].primary}}" width="1280" height="600" alt="">
+		<h3 class="project-title">{{ project.title }}</h3>
+		<span><p>{{ project.roles | join: ", " }}</p></span>
+	</article>		
+
+	{% endfor %}
+
 </div>
 
 <!-- Written content -->
