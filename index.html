@@ -13,9 +13,24 @@ order: 1
 
 	{% for project in site.projects %}
 
+	{% capture image_url %}
+	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
+	{% endcapture %}
+
+	{% capture image_url_mobile %}
+	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
+	{% endcapture %}
+
 	<article class="project-item layout-column layout-tile">
+		
 		<a class="project-link-area" href="{{project.url}}"></a>
-		<img src="/uploads/{{project.slug}}/{{project.graphics[0].primary}}" width="1280" height="600" alt="">
+
+		<picture class="img-container">
+			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
+			<img src="{{ image_url_mobile }}" alt="{{ project.title }}" />
+		</picture>
+
+
 		<h3 class="project-title">{{ project.title }}</h3>
 		<span><p>{{ project.roles | join: ", " }}</p></span>
 	</article>		
@@ -27,31 +42,32 @@ order: 1
 <!-- Written content -->
 
 <div class="layout-row">
-	<div class="layout-column">
-			<h2>Clients you'll recognise</h2>
+	<div class="layout-column layout-tile">
+		<h2>Clients you'll recognise</h2>
 
-			<ul>
-				{% for client in site.data.clients %}
+		<ul>
+			{% for client in site.data.clients %}
 
-				<li>{{ client.name}}</li>
+			<li>{{ client.name}}</li>
 
-				{% endfor %}
-			</ul>
+			{% endfor %}
+		</ul>
 	</div>
 
-	<div class="layout-column">
-			<h2>Clients close to my heart</h2>
+	<div class="layout-column layout-tile">
+		<h2>Clients close to my heart</h2>
 
-			<ul>
-				<li>Vamos</li>
-				<li>B-Reel</li>
-				<li>Wine in Black</li>
-				<li>Evino</li>
-				<li>Sean Williams</li>
-			</ul>
+		<ul>
+			<li>Vamos</li>
+			<li>B-Reel</li>
+			<li>Wine in Black</li>
+			<li>Evino</li>
+			<li>Sean Williams</li>
+		</ul>
 	</div>
+</div>
 
-	
+<div class="layout-row">
 	<!-- Work friends -->
 	<div class="layout-column">
 		<h2>Work friends that will vouch for me</h2>
@@ -66,12 +82,17 @@ order: 1
 
 		</dl>
 	</div>
-	<!-- Work friends -->
-	<div class="layout-column">
+</div>
+
+<div class="layout-row">
+	<!-- Experince and origins -->
+
+	<div class="layout-column layout-tile">
 		<h2>Expericence</h2>
 		<p>TL;DR • </p>
-	
-	
+	</div>
+	<div class="layout-column layout-tile">
+
 
 		<dl>
 			{% for milestone in site.data.origins %}
