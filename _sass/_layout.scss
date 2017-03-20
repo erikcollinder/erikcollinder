@@ -162,8 +162,6 @@ img.responsive-image {
 
 
 
-
-
 /**
  * Page content
  */
@@ -187,7 +185,7 @@ img.responsive-image {
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: $font-size-medium;
     color: red;
     &:visited {
         color: red;
@@ -207,26 +205,26 @@ img.responsive-image {
     margin-bottom: $space-medium;
 
     h2 {
-        font-size: 32px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 28px;
+            font-size: $font-size-medium;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 22px;
+            font-size: $font-size-medium;
         }
     }
 
     h4 {
-        font-size: 20px;
+        font-size: $font-size-medium;
 
         @include breakpoint($medium-up) {
-            font-size: 18px;
+            font-size: $font-size-medium;
         }
     }
 }
