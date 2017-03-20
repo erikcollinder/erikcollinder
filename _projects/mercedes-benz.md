@@ -9,6 +9,7 @@ description: To launch the Mercedes-Benz GLA 2015 they wanted to try something a
 
 graphics:
   - primary: header-generic.jpg
+    mobile: header-generic-mobile.jpg
     color: "#DCCCAB"
 
 # Display

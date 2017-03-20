@@ -23,6 +23,7 @@ table:
 
 graphics:
   - primary: header-wineinblack.png
+    mobile: screenshot-1.png
     color: black
   - opengraph: opengraph-wineinblack.png
 date: 2017-03-09
