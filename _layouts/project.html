@@ -5,9 +5,8 @@ layout: default
 <article class="post">
 
   <header class="project-header layout-row">
-    <div class="layout-column">
+    <div class="layout-column layout-aside">
       <h1>{{ page.title }}</h1>
-      <h2>{{ page.subtitle }}</h2>
 
       {% if page.roles %}
 
@@ -20,45 +19,47 @@ layout: default
       </ul>
 
       {% endif %}
+    </div>
 
+    <div class="layout-column layout-right">
+      <h2>{{ page.subtitle }}</h2>
+      <p class="description">
+        {{ page.description }}
+      </p>
 
-    <p class="description">
-      {{ page.description }}
-    </p>
+      {% if page.table %}
 
-    {% if page.table %}
-
-    <table>
-      {% for row in page.table %}
+      <table>
+        {% for row in page.table %}
         <tr>
           <td>{{ row.key | markdownify }}</td>
           <td>{{ row.value | markdownify }}</td>
         </tr>
-      {% endfor %}
-    </table>
+        {% endfor %}
+      </table>
 
-    {% endif %}
-  </div>
-</header>
+      {% endif %}
+    </div>
+  </header>
 
-<!-- Content Blocks Start -->
+  <!-- Content Blocks Start -->
 
-{% include blocks.html %}
+  {% include blocks.html %}
 
-<!-- Free style content for the bottom of the page -->
+  <!-- Free style content for the bottom of the page -->
 
-{% if page.underconstruction == true %}
+  {% if page.underconstruction == true %}
   {% include underconstruction.html %}
-{% endif %}
+  {% endif %}
 
-<div class="post-content layout-row">
-  <div class="layout-column">
-    {{ content }}
+  <div class="post-content layout-row">
+    <div class="layout-column">
+      {{ content }}
+    </div>
   </div>
-</div>
 
-<!-- Next project -->
+  <!-- Next project -->
 
-{% include nextprev.html %}
+  {% include nextprev.html %}
 
 </article>

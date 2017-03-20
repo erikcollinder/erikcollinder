@@ -30,18 +30,30 @@
 
       <!-- Default Layout -->
       
-      <div class="layout-column">
-        <h2>{{ block.title | markdownify }}</h2>
+      <div class="">
         
         {% if block.image %}
         
-        
+          <div class="layout-column layout-right">
+            
+            <figure>
+              <img class="responsive-image" src="{{ image_url }}" alt="{{ block.title }}">
+            </figure>
+            
+          </div>
 
-        <figure>
-          <img class="responsive-image" src="{{ image_url }}" alt="{{ block.title }}">
-          <figcaption>{{ block.text }}</figcaption>
-        </figure>
-        
+          <div class="layout-column layout-aside">
+            
+            {% if block.title %}
+            <h2>{{ block.title | markdownify }}</h2>
+            {% endif %}
+
+            {% if block.text %}
+            <p>{{ block.text }}</p>
+            {% endif %}
+
+          </div>
+
         {% else %}
 
           <p>{{ block.text | markdownify }}</p>

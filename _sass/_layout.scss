@@ -38,6 +38,7 @@ body {
 
 .layout-column {
     //float: left;
+    position: relative;
     padding-left: $space-small/2;
     padding-right: $space-small/2;
 
@@ -49,6 +50,34 @@ body {
     @include breakpoint($large-up) {
         padding-right: $space-medium;
         padding-left: $space-medium;  
+    }
+}
+
+.layout-tile {
+    @include breakpoint($medium-up){
+        width: 50%;
+        float: left;
+    }
+}
+
+.layout-right {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: right;
+    }
+}
+
+.layout-left {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: left;
+    }
+}
+
+.layout-aside {
+    @include breakpoint($medium-up) {
+        width: 30%;
+        float: left;
     }
 }
 
@@ -131,6 +160,8 @@ img.responsive-image {
     width: -webkit-calc(45% - (#{$space-medium} / 2));
     width:         calc(45% - (#{$space-medium} / 2));
 }
+
+
 
 
 

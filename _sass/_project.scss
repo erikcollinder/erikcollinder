@@ -36,11 +36,6 @@
 .project-item {
 	overflow: hidden;
 	position: relative;
-	
-	@include breakpoint($medium-up){
-		width: 50%;
-		float: left;
-	}
 
 	.img-container {
 		// In addition to global styles found in _layout.scss
