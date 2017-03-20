@@ -23,7 +23,6 @@ order: 1
 
 	<article class="project-item layout-column layout-tile">
 		
-		<a class="project-link-area" href="{{project.url}}"></a>
 
 		<picture class="img-container">
 			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
@@ -31,7 +30,9 @@ order: 1
 		</picture>
 
 		<h3 class="project-title">{{ project.title }}</h3>
-		<span><p>{{ project.roles | join: ", " }}</p></span>
+		<p class="project-subtitle hide">{{ project.roles | join: ", " }}</p>
+
+		<a class="project-link-area" href="{{project.url}}"></a>
 	</article>		
 
 	{% endfor %}
@@ -66,8 +67,8 @@ order: 1
 	</div>
 </div>
 
-<div class="layout-row">
-	<!-- Work friends -->
+<!-- Work friends -->
+<div class="layout-row hide">
 	<div class="layout-column">
 		<h2>Work friends that will vouch for me</h2>
 
@@ -83,8 +84,8 @@ order: 1
 	</div>
 </div>
 
-<div class="layout-row">
-	<!-- Experince and origins -->
+<!-- Experince and origins -->
+<div class="layout-row hide">
 
 	<div class="layout-column layout-tile">
 		<h2>Expericence</h2>
