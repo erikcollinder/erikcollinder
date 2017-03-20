@@ -30,13 +30,18 @@
 .project-link-area:hover{
 	&~p {color: red; }
 	&~h3 {color: red; }
-	&~img {border: 2px red solid; }
+	&~img { }
 }
 
 .project-item {
 	overflow: hidden;
 	position: relative;
 	
+	@include breakpoint($medium-up){
+		width: 50%;
+		float: left;
+	}
+
 	.img-container {
 		// In addition to global styles found in _layout.scss
 		padding-bottom: 66.66%; 
