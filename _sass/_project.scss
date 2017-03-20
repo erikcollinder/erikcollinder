@@ -83,10 +83,6 @@
 // Layout breakpoint where we switch to 1:3 layout
 
 @include breakpoint($medium-up){
-	.project-item figure {
-		width: 68%;
-		float: right;
-	}
 
 	.project-meta {
 		//padding-top: $space-medium;
