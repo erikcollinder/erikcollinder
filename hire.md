@@ -1,6 +1,6 @@
 ---
 title: Contact + Hire
-layout: default
+layout: default-wrapped
 order: 5
 ---
 
@@ -16,6 +16,9 @@ The most important piece of information you'll need to hire me, is contact info.
 
 <small>iMessage also works</small>
 
+{{site.skype}}
+
+<small>Skype</small>
 
 # Good reasons to give me a shout
 
