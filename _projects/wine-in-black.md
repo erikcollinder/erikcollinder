@@ -7,17 +7,6 @@ description: "When I first started out working with Wine in Black my team was br
 
 year: 2016
 roles: [Product Design, iOS Strategy & Design, Web Design]
-table:
-  - key: Font
-    value: Comic Sans
-  - key: Agency
-    value: These Guys
-  - key: Project Lead
-    value: Luis-Daniel Alegría
-  - key: iOS Developer
-    value: Malte Schonvogel
-  - key: Web Developer
-    value: Ben Lau
 
 # Graphics
 
@@ -41,12 +30,20 @@ blocks:
     image: app-1.png
     text: This is the heart of berlin based Wine in Black. A team of experts sample hundreds of bottles of wine — they have the best job in the world — and selects only a few for the shop.
   
-  - image: 2015-11-25 14.26.13.jpg
+  - title: Meeting Time
+    image: 2015-11-25 14.26.13.jpg
     text: This is a meeting 
 
   - text: User Testing
     image: usertesting.jpg
 
+  - image: usertesting.jpg
+    layout: full
+
+  - image: 2015-11-27_16.53.11.jpg
+    text: On the last day of the design sprint the users are invited.
+  - title: And so we worked
+    layout: break
   - image: 2015-11-27_16.53.11.jpg
     text: On the last day of the design sprint the users are invited.
 
@@ -55,8 +52,8 @@ blocks:
 # Notes 
 
   - title: Search
-
     text: These mountains are the most amazing things I've ever seen.
+
   - title: Catalogue to detail view transition
 
   - title: List view
@@ -64,3 +61,17 @@ blocks:
   - title: iPad Catalogue, containing Sets
 
   - title: Prototypes
+
+- - -
+
+  table:
+  - key: Font
+    value: Comic Sans
+  - key: Agency
+    value: These Guys
+  - key: Project Lead
+    value: Luis-Daniel Alegría
+  - key: iOS Developer
+    value: Malte Schonvogel
+  - key: Web Developer
+    value: Ben Lau
