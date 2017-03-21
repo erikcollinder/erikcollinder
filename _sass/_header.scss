@@ -2,22 +2,24 @@
  * Site header
  */
 
+.site-logo {
+    float: left;
+    position: relative;
+}
+
 .site-header {
     background: turquoise;
-    padding-top: 30vh;
-    min-height: 146px;
-    //height: 60vh;
 }
 
 .site-subtitle {
     margin-bottom: 0;
-    font-size: $font-size-small - 1;
+    font-size: $font-size-small;
 }
 
 .site-title {
     font-size: $font-size-large;
     font-weight: 700;
-    line-height: 56px;
+    line-height: 2rem;
     margin-bottom: 0;
 
     &,
