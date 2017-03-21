@@ -12,8 +12,9 @@
 }
 
 .site-subtitle {
-    margin-bottom: 0;
-    font-size: $font-size-small;
+    margin-bottom: $space-small/2;
+    font-size: $font-size-medium;
+    font-family: $font-family-serif;
 }
 
 .site-title {
