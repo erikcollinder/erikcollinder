@@ -12,7 +12,7 @@
 - title: B-Reel London
   year: 2010
   description: >
-    This is a descriptive text. Lorem ipsum dolor sit amet,
+    This is a [descriptive link](http://somewhere.com/). Lorem ipsum dolor sit amet,
     consectetur adipiscing elit. Praesent commodo varius 
     massa, quis rhoncus enim viverra vel. Fusce vehicula mi
     quis felis pretium vel eleifend est mattis. 
