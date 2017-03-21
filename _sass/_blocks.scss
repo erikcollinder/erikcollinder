@@ -2,13 +2,22 @@
 	// Layout debug gradient
 	padding-top: $space-large;
 	padding-bottom: $space-large;
-    background: linear-gradient(to bottom, #fcfcfc 0%,#f0f0f0 100%);
 }
 
 .block-item img {
 	margin: 0 auto;
 }
 
-.block-item {
+.full.layout-row {
+	padding: 0;
+	background: black;
+}
 
+.break.layout-row {
+	text-align: center;
+	background: $color-grey-light;
+
+	h2 {
+		font-size: 56px;
+	}
 }
