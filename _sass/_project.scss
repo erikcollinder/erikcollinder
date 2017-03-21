@@ -13,24 +13,7 @@
 }
 
 .project-link, .project-link:visited {
-	color: $text-color;
-}
-
-.project-link-area {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-
-// Hover states
-
-.project-link-area:hover{
-	&~p {color: red; }
-	&~h3 {color: red; }
-	&~img { }
+	color: $color-ink;
 }
 
 .project-item {
@@ -40,10 +23,11 @@
 
 	.img-container {
 		// In addition to global styles found in _layout.scss
-		padding-bottom: 66.66%; 
+		background: $color-grey-light;
+		padding-bottom: 75%; 
 
 		// Larger screens have wider format images, 16:9 in this case
-		@include breakpoint($small-up){ padding-bottom: 56.25%; }
+		@include breakpoint($small-up){ padding-bottom: 75%; }
 	
 		// Push heading down a little
 		margin-bottom: $space-small/2;
@@ -65,7 +49,7 @@
 	}
 }
 .project-subtitle {
-	font-weight: 300; color: $grey-color-dark;
+	font-weight: 300; color: $color-ink;
 	font-size: $font-size-small;
 }
 
@@ -77,6 +61,15 @@
 		font-size: $font-size-medium;
 		line-height: 26px;
 	}
+}
+
+.section-heading {
+	//text-transform: uppercase;
+	//letter-spacing: 0.1em;
+	font-family: $font-family-serif;
+	font-size: $font-size-large;
+	border-bottom: 1px dashed #ccc;
+	font-weight: 500;
 }
 
 // Layout breakpoint where we switch to 1:3 layout
@@ -97,7 +90,7 @@
 		.project-title:before {
 			content: " ";
 			display: block;
-			border-top: 1px solid $grey-color-light;
+			border-top: 1px solid $color-grey-light;
 		}
 	}
 }
