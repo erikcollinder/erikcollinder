@@ -60,6 +60,22 @@ $content-width:    1440px;
 
 // Debug styles
 
-.hide {
+.hide, %hide {
 	display: none;
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.gradient, %gradient {
+
 }
