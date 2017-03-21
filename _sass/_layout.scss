@@ -48,8 +48,8 @@ body {
     }
 
     @include breakpoint($large-up) {
-        padding-right: $space-medium;
-        padding-left: $space-medium;  
+        padding-right: $space-large/2;
+        padding-left: $space-large/2;  
     }
 }
 
@@ -126,40 +126,11 @@ img.responsive-image {
     .layout-column:before {
         display: block;
         content: " ";
-        border-top: 1px dotted $grey-color-light;
+        border-top: 1px dashed $color-grey-light;
         position: relative;
         top: -$space-medium;
     }
 }
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$space-medium / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $space-medium / 2;
-    padding-left: $space-medium / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$space-medium} / 2));
-    width:         calc(35% - (#{$space-medium} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$space-medium} / 2));
-    width:         calc(20% - (#{$space-medium} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$space-medium} / 2));
-    width:         calc(45% - (#{$space-medium} / 2));
-}
-
 
 
 /**
@@ -180,7 +151,7 @@ img.responsive-image {
 
 .post-meta {
     font-size: $font-size-small;
-    color: $grey-color;
+    color: $color-grey;
 }
 
 .post-link {
