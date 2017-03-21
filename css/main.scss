@@ -3,11 +3,13 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "ff-basic-gothic-web-pro", Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans: "ff-basic-gothic-web-pro", Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "mrs-eaves-xl-serif", "Georgia", serif;
+$font-family-default: $font-family-sans	;
 
 // Font sizes
 
-$font-size-medium: 16px;
+$font-size-medium: 17px;
 $font-size-small:  $font-size-medium * 0.8;
 $font-size-large: $font-size-medium * 2;
 
@@ -18,24 +20,31 @@ $base-line-height: 1.5;
 
 $space-small:  12px;
 $space-medium: 24px;
-$space-large:  48px;
+$space-large:  36px;
 
 
 // Colours
 
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 30%);
-$grey-color-dark:  darken($grey-color, 25%);
+
+// Colours gray scale
+
+$color-offblack: black;
+$color-grey:       #828282;
+$color-grey-light: lighten($color-grey, 30%);
+$color-grey-dark:  darken($color-grey, 25%);
+$color-white: white;
+
 
 // Colour aliases
-$text-color:       #333;
+
+$color-key:      #40e0d0;
+$color-ink: $color-offblack;
+$color-background: $color-white;
 
 // Width of the content area
 
-$content-width:    1280px;
+$content-width:    1440px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

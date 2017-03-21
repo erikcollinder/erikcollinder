@@ -24,7 +24,7 @@
 
     &,
     &:visited {
-        color: $text-color;
+        color: $color-ink;
     }
 }
 
@@ -37,7 +37,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $color-ink;
         line-height: $base-line-height;
 
         &.active {
