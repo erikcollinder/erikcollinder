@@ -11,7 +11,7 @@ order: 1
 		<h2 class="section-heading">Selected Work</h2>
 	</div>
 
-	{% for project in site.projects %}
+	{% for project in site.projects reversed %}
 		
 	{% capture image_url %}
 	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
