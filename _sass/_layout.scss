@@ -117,23 +117,6 @@ img.responsive-image {
 }
 
 /**
- * Site footer
- */
-.site-footer {
-    padding-top:    $space-medium;
-    padding-bottom: $space-medium;
-    
-    .layout-column:before {
-        display: block;
-        content: " ";
-        border-top: 1px dashed $color-grey-light;
-        position: relative;
-        top: -$space-medium;
-    }
-}
-
-
-/**
  * Page content
  */
 .page-content {
