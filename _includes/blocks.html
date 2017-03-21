@@ -11,20 +11,41 @@
     {% capture image_url %}
     /uploads/{{ page.slug }}/{{ block.image }}
     {% endcapture %}
-  
 
     {% case block.layout %}
 
-      {% when "full" %}
-
+      {% when "break" %}
       <!-- Full width block -->
 
-        <h2>{{ block.title }}</h2>
+        <div>
+          
+          <h2>{{ block.title }}</h2>
+
+        </div>
+
+      {% when "full" %}
+      <!-- Full width block -->
+
+        <div>
+          <h2>{{ block.title }}</h2>
         
-        <figure>
-          <img src="{{ block.image_url }}" alt="{{ block.title }}">
-          <figcaption>{{ block.text }}</figcaption>
-        </figure>
+          <figure>
+            <img src="{{ image_url }}" alt="{{ block.title }}">
+          </figure>
+
+          <div class="layout-column layout-aside">
+            
+            {% if block.title %}
+            <h2>{{ block.title }}</h2>
+            {% endif %}
+
+            {% if block.text %}
+            { block.text | markdownify }}
+            {% endif %}
+
+          </div>
+
+        </div>
 
       {% else %}
 
@@ -45,11 +66,11 @@
           <div class="layout-column layout-aside">
             
             {% if block.title %}
-            <h2>{{ block.title | markdownify }}</h2>
+            <h2>{{ block.title }}</h2>
             {% endif %}
 
             {% if block.text %}
-            <p>{{ block.text }}</p>
+            {{ block.text | markdownify }}
             {% endif %}
 
           </div>
