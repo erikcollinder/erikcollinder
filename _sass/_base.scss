@@ -16,9 +16,9 @@ img, article, div {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$font-size-medium}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    font: $base-font-weight #{$font-size-medium}/#{$base-line-height} $font-family-default;
+    color: $color-ink;
+    background-color: $color-background;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -30,13 +30,24 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, hr,
-%vertical-rhythm {
-    margin-bottom: $space-medium;
+
+
+
+ %vertical-rythm {
+    margin-bottom: $space-medium/2;
+ }
+
+.page-content { 
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, hr {
+        margin-bottom: $space-medium/2;       
+    }
 }
 
+hr {
+    height: $space-medium;
+    background: $color-key;
+    display: block;
+}
 
 
 /**
@@ -88,6 +99,7 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
+    @extend %vertical-rythm;
 }
 
 h1 {
@@ -96,7 +108,9 @@ h1 {
 }
 
 h2 {
-    font-size: $font-size-medium;
+    font-weight: 500;
+    font-family: $font-family-serif;
+    font-size: $font-size-large;
 }
 
 h3 {
@@ -108,15 +122,15 @@ h3 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $color-key;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $color-key;
     }
 
     &:hover {
-        color: $text-color;
+        color: darken($color-key, 20%);
     }
 }
 
@@ -125,8 +139,8 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $color-grey;
+    border-left: 4px solid $color-grey-light;
     padding-left: $space-medium / 2;
     letter-spacing: -1px;
     font-style: italic;
@@ -144,7 +158,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $color-grey-light;
     border-radius: 3px;
     background-color: #eef;
 }
@@ -176,7 +190,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $color-grey;
         }
     }
 }
