@@ -1,13 +1,19 @@
 /* Project List
 ======================================*/ 
 
-.project-list {
+.project-tiles {
 	overflow: hidden;
+}
+
+@include smallerthan($medium-up) {
+	.project-tiles, .project-item.layout-column {
+		padding: 0;
+	}
 }
 
 // Image treatment 
 
-.project-list .project-image {
+.project-tiles .project-image {
     margin: 0 auto;
     width: 100%;
 }
@@ -19,30 +25,29 @@
 .project-item {
 	overflow: hidden;
 	position: relative;
-	margin-bottom: $space-medium;
 
 	.img-container {
 		// In addition to global styles found in _layout.scss
 		background: $color-grey-light;
 		padding-bottom: 75%; 
 		
-		// Rounded Corners
-		border-radius: 3px;
 		
-		// Shadow, 1px
-		&:after {
-			content: " ";
-			position: absolute;
-			top: 0; right: 0; bottom: 0; left: 0;
-			display: block;
-			border: 1px solid rgba(0,0,0,0.07);
-			//box-shadow:inset 0 0 1px rgba(0,0,0,0.1);
+		@include breakpoint($medium-up){
+			// Shadow, 1px
+			&:after {
+				content: " ";
+				position: absolute;
+				top: 0; right: 0; bottom: 0; left: 0;
+				display: block;
+				border: 1px solid rgba(0,0,0,0.07);
+				//box-shadow:inset 0 0 1px rgba(0,0,0,0.1);
+			}
+
+			// Rounded Corners
+			border-radius: 3px;
+
 		}
-
-		// Push heading down a little
-		margin-bottom: $space-small/2;
 	}
-
 }
 
 
@@ -51,13 +56,6 @@
 .project-title { 
 	margin-bottom: 0;
 	font-size: $font-size-medium;
-
-	@include smallerthan($medium-up) {
-		position: absolute;
-		top: $space-medium;
-		left: $space-medium;
-		color: white;
-	}
 }
 .project-subtitle {
 	font-weight: 300; color: $color-ink;
@@ -68,24 +66,22 @@
 .project-subtitle {
 	color: white;
 	line-height: 24px;
-
-	@include breakpoint($medium-up){
-		font-size: $font-size-medium;
-		line-height: 26px;
-	}
 }
 
 .project-meta-lockup {
-	position: absolute;
-	bottom: $space-medium;
-	left: $space-medium;
+//	position: absolute;
+	// bottom: $space-medium;
+	// left: $space-medium;
 }
 
 .project-client-logotype {
-	height: $space-medium*2;
-    max-width: $space-medium*5;
+	height: $space-medium*1.5;  
     @extend %vertical-rythm;
 
+    @include breakpoint($small-up) {
+		height: $space-medium * 2;
+    }
+	
 }
 
 .section-heading {
