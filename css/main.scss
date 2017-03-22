@@ -11,7 +11,7 @@ $font-family-default: $font-family-sans	;
 
 $font-size-medium: 17px;
 $font-size-small:  $font-size-medium * 0.8;
-$font-size-large: $font-size-medium * 2;
+$font-size-large: $font-size-medium * 1.8;
 
 $base-font-weight: 400;
 $base-line-height: 1.5;
@@ -33,12 +33,12 @@ $color-offblack: black;
 $color-grey:       #828282;
 $color-grey-light: lighten($color-grey, 30%);
 $color-grey-dark:  darken($color-grey, 25%);
-$color-white: white;
+$color-white: #e0e5ea;
 
 
 // Colour aliases
 
-$color-key:      #40e0d0;
+$color-key:      #9EE3DC;
 $color-ink: $color-offblack;
 $color-background: $color-white;
 
