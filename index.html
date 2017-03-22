@@ -6,7 +6,7 @@ order: 1
 
 <!-- Project tiles -->
 
-<div class="layout-row project-list">
+<div class="layout-row project-tiles">
 	<div class="layout-column">
 	</div>
 
@@ -24,12 +24,11 @@ order: 1
 		
 		<div class="img-container" style="background: {{ project.graphics[0].color }}">
 			<picture> 
-				<p>comon</p>
 				<img class="project-image" src="{{ image_url }}" alt="{{ project.title }}"/>
 			</picture>
 		
 		
-			<div class="project-meta-lockup">
+			<div class="project-meta-lockup pin-bottom-left">
 			{% if project.client %}
 
 			{% assign logo_name = site.data.clients[project.client].logo %}
