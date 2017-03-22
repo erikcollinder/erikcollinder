@@ -90,14 +90,13 @@ order: 1
 	<div class="layout-column layout-tile">
 		<h2>Expericence</h2>
 		<p>TL;DR • </p>
+		<p>Who I am and where I come from. The stuff that doesn't belong in case studies.</p>
 	</div>
 	<div class="layout-column layout-tile">
-
-
 		<dl>
 			{% for milestone in site.data.origins %}
 
-			<dt>{{ milestone.title}}</dt>
+			<dt>{{ milestone.year}} • {{ milestone.title}}</dt>
 			<dd>{{ milestone.description | markdownify }}</dd>
 
 			{% endfor %}
