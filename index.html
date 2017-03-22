@@ -4,7 +4,7 @@ layout: default
 order: 1
 ---
 
-<!-- Project list -->
+<!-- Project tiles -->
 
 <div class="layout-row project-list">
 	<div class="layout-column">
@@ -22,14 +22,36 @@ order: 1
 
 	<article class="project-item layout-column layout-tile">
 		
+		<div class="img-container" style="background: {{ project.graphics[0].color }}">
+			<picture>
+				<source srcset="{{ image_url }}" media="(min-width: 48em)" />
+				<img
+					class="project-image"
+					src="{{ image_url_mobile }}" alt="{{ project.title }}"/>
+			</picture>
+		
+		
+			<div class="project-meta-lockup">
+			{% if project.client %}
 
-		<picture class="img-container">
-			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
-			<img src="{{ image_url_mobile }}" alt="{{ project.title }}" />
-		</picture>
+			{% assign logo_name = site.data.clients[project.client].logo %}
 
-		<h3 class="project-title">{{ project.title }}</h3>
-		<p class="project-subtitle hide">{{ project.roles | join: ", " }}</p>
+				<img
+					class="project-client-logotype"
+					src="/assets/logos/{{ logo_name }}" alt="Logotype of {{ project.client }}">
+	        {% endif  %}
+
+			
+			<h3 class="project-title">
+				{% if project.title-display %}
+				{{ project.title-display }}
+				{% else %}
+				{{ project.title }}
+				{% endif %}
+			</h3>
+
+			</div>
+		</div>		
 
 		<a class="link-area" href="{{project.url}}"></a>
 	</article>		
@@ -44,12 +66,12 @@ order: 1
 
 <div class="layout-row">
 	<div class="layout-column layout-tile">
-		<h2>Clients you'll recognise</h2>
+		<h2>Big Names</h2>
 
 		<ul>
-			{% for client in site.data.clients %}
+			{% for clientbrag in site.data.clients %}
 
-			<li>{{ client.name}}</li>
+			<li>{{ clientbrag[1].name }}</li>
 
 			{% endfor %}
 		</ul>
