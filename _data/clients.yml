@@ -48,7 +48,13 @@ discovery:
 wine-in-black:
   name: Wine in Black
   logo: wine-in-black-logo.svg
+  link: https://www.b-reel.com
+
 
 vamos:
   name: Vamos
   logo: vamos-logo.svg
+
+breel:
+  name: B-Reel
+  link: https://www.b-reel.com
