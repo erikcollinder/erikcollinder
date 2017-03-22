@@ -1,40 +1,54 @@
 google:
   name: Google Inc
   logo: google-logo.svg
+  brag: true
+
+o2:
+  name: O2
+  brag: true
+
+volkswagen:
+  name: Volkswagen
+  brag: true
+
+discovery:
+  name: Discovery
+  brag: true
+
+qatar-airlines:
+  name: Qatar Airlines
+  logo: 
+  brag: true
+
+youtube:
+  name: YouTube
+  logo: 
+  brag: true
+
+hewlett-packard:
+  name: Hewlett Packard
+  logo: 
+  brag: true
+
+mercedes-benz:
+  name: Mercedes-Benz
+  logo: mercedes-benz-logo-plain.svg
+  brag: true
+
+volkswagen:
+  name: Volkswagen
+  logo: vw-logo.svg
+  brag: true
+
+discovery:
+   name: Discovery Networks
+   logo: discovery-logo.svg
+   brag: true
 
 wine-in-black:
   name: Wine in Black
   logo: wine-in-black-logo.svg
 
-o2:
-  name: O2
-
 vamos:
   name: Vamos
   logo: vamos-logo.svg
-
-volkswagen:
-  name: Volkswagen
-
-discovery:
-  name: Discovery
-
-qatar-airlines:
-  name: Qatar Airlines
-  logo: 
-
-youtube:
-  name: YouTube
-  logo: 
-
-hewlett-packard:
-  name: Hewlett Packard
-  logo: 
-
-mercedes-benz:
-  name: Mercedes-Benz
-  logo: mercedes-benz-logo-plain.svg
-
-volkswagen:
-  name: Volkswagen
-  logo: vw-logo.svg
