@@ -2,13 +2,16 @@
  * Site header
  */
 
+.site-header {
+    background: $color-white;
+}
 .site-logo {
     float: left;
     position: relative;
 }
 
-.site-header {
-    background: turquoise;
+.site-title, .site-subtitle {
+    color: $color-ink;
 }
 
 .site-subtitle {
@@ -22,11 +25,6 @@
     font-weight: 700;
     line-height: 2rem;
     margin-bottom: 0;
-
-    &,
-    &:visited {
-        color: $color-ink;
-    }
 }
 
 .site-nav {
