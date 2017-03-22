@@ -24,10 +24,7 @@ order: 1
 		
 		<div class="img-container" style="background: {{ project.graphics[0].color }}">
 			<picture>
-				<source srcset="{{ image_url }}" media="(min-width: 48em)" />
-				<img
-					class="project-image"
-					src="{{ image_url_mobile }}" alt="{{ project.title }}"/>
+				<img class="project-image" src="{{ image_url }}" alt="{{ project.title }}"/>
 			</picture>
 		
 		
