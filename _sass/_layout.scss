@@ -72,21 +72,21 @@ body {
 
 .layout-right {
     @include breakpoint($medium-up) {
-        width: 65%;
+        width: 75%;
         float: right;
     }
 }
 
 .layout-left {
     @include breakpoint($medium-up) {
-        width: 65%;
+        width: 75%;
         float: left;
     }
 }
 
 .layout-aside {
     @include breakpoint($medium-up) {
-        width: 30%;
+        width: 25%;
         float: left;
     }
 }
