@@ -9,7 +9,7 @@ description: "Gatherings and events are happening everywhere and all the time, b
 # Graphics
 
 graphics:
-  - primary: vamos-header.png
+  - primary: vamos-header-4-3.png
     mobile: vamos-header-mobile.png
     color: "#eb6124"
 roles:
