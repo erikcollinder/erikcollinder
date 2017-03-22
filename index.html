@@ -69,9 +69,13 @@ order: 1
 		<h2>Big Names</h2>
 
 		<ul>
-			{% for clientbrag in site.data.clients %}
 
-			<li>{{ clientbrag[1].name }}</li>
+			{% assign bragable = site.data.clients | where:'brag', true %}
+
+			{% for client in bragable %}
+
+			<li>{{ client.name }}</li>
+			<img src="/assets/logos/{{ client.logo }}" alt="">
 
 			{% endfor %}
 		</ul>
