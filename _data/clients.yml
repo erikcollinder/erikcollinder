@@ -1,23 +1,40 @@
-- name: Google
+google:
+  name: Google Inc
+  logo: google-logo.svg
+
+wine-in-black:
+  name: Wine in Black
+  logo: wine-in-black-logo.svg
+
+o2:
+  name: O2
+
+vamos:
+  name: Vamos
+  logo: vamos-logo.svg
+
+volkswagen:
+  name: Volkswagen
+
+discovery:
+  name: Discovery
+
+qatar-airlines:
+  name: Qatar Airlines
   logo: 
 
-- name: O2
+youtube:
+  name: YouTube
   logo: 
 
-- name: Google
-  logo:
-
-- name: Volkswagen
-  logo:
-
-- name: Discovery
-  logo:
-
-- name: Qatar Airlines
+hewlett-packard:
+  name: Hewlett Packard
   logo: 
 
-- name: YouTube
-  logo: 
+mercedes-benz:
+  name: Mercedes-Benz
+  logo: mercedes-benz-logo-plain.svg
 
-- name: Hewlett Packard
-  logo: 
+volkswagen:
+  name: Volkswagen
+  logo: vw-logo.svg
