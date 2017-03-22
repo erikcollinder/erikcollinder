@@ -64,7 +64,7 @@ body {
 // Classes for controlling column widths, even at different sizes
 
 .layout-tile {
-    @include breakpoint($medium-up){
+    @include breakpoint($small-up){
         width: 50%;
         float: left;
     }
@@ -90,6 +90,52 @@ body {
         float: left;
     }
 }
+
+
+/* Padding Classes
+====================================== */
+
+.padding-global {
+    padding-left: $space-small/2;
+    padding-right: $space-small/2;
+
+    @include breakpoint($medium-up) {
+        padding-right: $space-medium/2;
+        padding-left: $space-medium/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-large/2;
+        padding-left: $space-large/2;  
+    }
+}
+
+
+%pin {
+    position: absolute;
+}
+.pin-top-left {
+    @extend %pin;
+    top: 0;
+    left: 0;
+}
+.pin-top-right {
+    @extend %pin;
+}
+.pin-bottom-left {
+    @extend %pin;
+    padding-left: $space-small;
+    padding-bottom: $space-small;
+    bottom: 0;
+    left: 0;
+
+}
+.pin-bottom-right {
+    @extend %pin;
+}
+
+/* Misc Tools
+====================================== */
 
 /**
  * Non-jumping images while loading
@@ -124,75 +170,4 @@ img.responsive-image {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-
-
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $space-medium 0;
-}
-
-.project-list, .post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $space-medium;
-    }
-}
-
-.post-meta {
-    font-size: $font-size-small;
-    color: $color-grey;
-}
-
-.post-link {
-    display: block;
-    font-size: $font-size-medium;
-    color: red;
-    &:visited {
-        color: red;
-    }
-}
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $space-medium;
-}
-
-.post-content {
-    margin-bottom: $space-medium;
-
-    h2 {
-        font-size: $font-size-medium;
-
-        @include breakpoint($medium-up) {
-            font-size: $font-size-medium;
-        }
-    }
-
-    h3 {
-        font-size: $font-size-medium;
-
-        @include breakpoint($medium-up) {
-            font-size: $font-size-medium;
-        }
-    }
-
-    h4 {
-        font-size: $font-size-medium;
-
-        @include breakpoint($medium-up) {
-            font-size: $font-size-medium;
-        }
-    }
 }

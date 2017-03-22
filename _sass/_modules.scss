@@ -1,3 +1,70 @@
 .site-footer {
-    background: yellow;
+	@extend %hide;
+}
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $space-medium 0;
+}
+
+.project-list, .post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $space-medium;
+    }
+}
+
+.post-meta {
+    font-size: $font-size-small;
+    color: $color-grey;
+}
+
+.post-link {
+    display: block;
+    font-size: $font-size-medium;
+    color: red;
+    &:visited {
+        color: red;
+    }
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $space-medium;
+}
+
+.post-content {
+    margin-bottom: $space-medium;
+
+    h2 {
+        font-size: $font-size-medium;
+
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
+        }
+    }
+
+    h3 {
+        font-size: $font-size-medium;
+
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
+        }
+    }
+
+    h4 {
+        font-size: $font-size-medium;
+
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
+        }
+    }
 }
