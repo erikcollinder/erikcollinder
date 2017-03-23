@@ -19,3 +19,7 @@ skype: erik.collinder
 linkedin: erikcollinder
 sass:
   style: compressed
+gems: [jekyll/imgix]
+imgix:
+  source: erikcollinder.imgix.net # Your imgix source address
+  secure_url_token: FACEBEEF12 # (optional) The Secure URL Token associated with your source

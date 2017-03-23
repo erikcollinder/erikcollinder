@@ -21,3 +21,7 @@ layout: project
 date: 2012-03-09
 underconstruction: true
 ---
+
+![test image]({{ "/uploads/google-web-lab/1280-web-lab-mobile.jpg" | imgix_url }})
+
+![test image]({{ "/uploads/google-web-lab/1280-web-lab-mobile.jpg" }})
