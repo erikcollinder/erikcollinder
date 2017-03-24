@@ -1,86 +1,163 @@
+/* Top, top level
+====================================== */
+
+html { background-color: $background-color; }
+body {
+    max-width: $content-width;
+    margin: 0 auto 0 auto;
+}
+
+/* Rows and Columns
+====================================== */
+
+// The layout row must always reach edge to edge
+
+.layout-row {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top:    $space-small/2;
+    padding-right:  $space-small/2;
+    padding-bottom: $space-small/2;
+    padding-left:   $space-small/2;
+    @extend %clearfix;
+
+    @include breakpoint($medium-up) {
+        padding-top:    $space-medium/2;  
+        padding-right:  $space-medium/2;
+        padding-bottom: $space-medium/2;  
+        padding-left:   $space-medium/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-large;
+        padding-left: $space-large;  
+    }
+}
+
+// Everything must sit inside a layout column, otherwise the gutters won't line up
+
+.layout-column {
+    //float: left;
+    position: relative;
+    padding-left: $space-small/2;
+    padding-right: $space-small/2;
+
+    @include breakpoint($medium-up) {
+        padding-right: $space-medium/2;
+        padding-left: $space-medium/2;  
+    }
+
+    @include breakpoint($large-up) {
+        padding-right: $space-medium;
+        padding-left: $space-medium;  
+    }
+}
+
+.layout-tile {
+    @include breakpoint($medium-up){
+        width: 50%;
+        float: left;
+    }
+}
+
+.layout-right {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: right;
+    }
+}
+
+.layout-left {
+    @include breakpoint($medium-up) {
+        width: 65%;
+        float: left;
+    }
+}
+
+.layout-aside {
+    @include breakpoint($medium-up) {
+        width: 30%;
+        float: left;
+    }
+}
+
+
 /**
- * Site header
+ * Clearfix
  */
-.site-header {
-    background-color: #ccc;
-    min-height: 56px;
-}
+%clearfix {
 
-.site-title {
-    font-size: $base-font-size;
-    font-weight: 500;
-    line-height: 56px;
-    margin-bottom: 0;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
-.site-nav {
-    
-    line-height: 36px;
+/**
+ * Non-jumping images
+ */
 
-    .menu-icon {
-        display: none;
-    }
+.img-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
 
-        &.active {
-            color: red;
-        }
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
+img.responsive-image {
+    width: 100%;
 }
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding-top:    $space-medium;
+    padding-bottom: $space-medium;
+    
+    .layout-column:before {
+        display: block;
+        content: " ";
+        border-top: 1px dotted $grey-color-light;
+        position: relative;
+        top: -$space-medium;
+    }
 }
 
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    margin-left: -$space-medium / 2;
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    margin-bottom: $space-medium / 2;
+    padding-left: $space-medium / 2;
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(35% - (#{$space-medium} / 2));
+    width:         calc(35% - (#{$space-medium} / 2));
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(20% - (#{$space-medium} / 2));
+    width:         calc(20% - (#{$space-medium} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(45% - (#{$space-medium} / 2));
+    width:         calc(45% - (#{$space-medium} / 2));
 }
 
 
@@ -89,7 +166,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $space-medium 0;
 }
 
 .project-list, .post-list {
@@ -97,18 +174,18 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: $space-medium;
     }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
     color: $grey-color;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: $font-size-medium;
     color: red;
     &:visited {
         color: red;
@@ -121,33 +198,33 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $space-medium;
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $space-medium;
 
     h2 {
-        font-size: 32px;
+        font-size: $font-size-medium;
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: $font-size-medium;
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
         }
     }
 
     h4 {
-        font-size: 20px;
+        font-size: $font-size-medium;
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
+        @include breakpoint($medium-up) {
+            font-size: $font-size-medium;
         }
     }
 }

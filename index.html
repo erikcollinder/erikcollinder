@@ -4,6 +4,103 @@ layout: default
 order: 1
 ---
 
-<h1>Welcome to my website</h1>
+<!-- Project list -->
 
-<p>I'm a Designer and Art Director that lives in Berlin and sometimes works in other places.</p>
+<div class="layout-row project-list">
+	<div class="layout-column">
+		<h2 class="section-heading">Selected Work</h2>
+	</div>
+
+	{% for project in site.projects %}
+		
+	{% capture image_url %}
+	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
+	{% endcapture %}
+
+	{% capture image_url_mobile %}
+	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
+	{% endcapture %}
+
+	<article class="project-item layout-column layout-tile">
+		
+
+		<picture class="img-container">
+			<source srcset="{{ image_url }}" media="(min-width: 48em)" />
+			<img src="{{ image_url_mobile }}" alt="{{ project.title }}" />
+		</picture>
+
+		<h3 class="project-title">{{ project.title }}</h3>
+		<p class="project-subtitle hide">{{ project.roles | join: ", " }}</p>
+
+		<a class="project-link-area" href="{{project.url}}"></a>
+	</article>		
+
+	{% endfor %}
+
+</div>
+
+<!-- Written content -->
+
+<div class="layout-row">
+	<div class="layout-column layout-tile">
+		<h2>Clients you'll recognise</h2>
+
+		<ul>
+			{% for client in site.data.clients %}
+
+			<li>{{ client.name}}</li>
+
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="layout-column layout-tile">
+		<h2>Clients close to my heart</h2>
+
+		<ul>
+			<li>Vamos</li>
+			<li>B-Reel</li>
+			<li>Wine in Black</li>
+			<li>Evino</li>
+			<li>Sean Williams</li>
+		</ul>
+	</div>
+</div>
+
+<!-- Work friends -->
+<div class="layout-row hide">
+	<div class="layout-column">
+		<h2>Work friends that will vouch for me</h2>
+
+		<dl>
+			{% for friend in site.data.friends %}
+
+			<dt>{{ friend.name}}</dt>
+			<dd>{{ friend.title}} at {{ friend.company }}</dd>
+
+			{% endfor %}
+
+		</dl>
+	</div>
+</div>
+
+<!-- Experince and origins -->
+<div class="layout-row hide">
+
+	<div class="layout-column layout-tile">
+		<h2>Expericence</h2>
+		<p>TL;DR • </p>
+	</div>
+	<div class="layout-column layout-tile">
+
+
+		<dl>
+			{% for milestone in site.data.origins %}
+
+			<dt>{{ milestone.title}}</dt>
+			<dd>{{ milestone.description }}</dd>
+
+			{% endfor %}
+		</dl>
+	</div>
+</div>

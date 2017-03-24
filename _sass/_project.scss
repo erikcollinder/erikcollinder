@@ -1,0 +1,130 @@
+/* Project List
+======================================*/ 
+
+.project-list {
+	overflow: hidden;
+}
+
+// Image treatment 
+
+.project-list img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-link, .project-link:visited {
+	color: $text-color;
+}
+
+.project-link-area {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+// Hover states
+
+.project-link-area:hover{
+	&~p {color: red; }
+	&~h3 {color: red; }
+	&~img { }
+}
+
+.project-item {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: $space-medium;
+
+	.img-container {
+		// In addition to global styles found in _layout.scss
+		padding-bottom: 66.66%; 
+
+		// Larger screens have wider format images, 16:9 in this case
+		@include breakpoint($small-up){ padding-bottom: 56.25%; }
+	
+		// Push heading down a little
+		margin-bottom: $space-small/2;
+	}
+
+}
+
+// Trying to make these titles a global
+
+.project-title { 
+	margin-bottom: 0;
+	font-size: $font-size-medium;
+
+	@include smallerthan($medium-up) {
+		position: absolute;
+		top: $space-medium;
+		left: $space-medium;
+		color: white;
+	}
+}
+.project-subtitle {
+	font-weight: 300; color: $grey-color-dark;
+	font-size: $font-size-small;
+}
+
+.project-title, 
+.project-subtitle {
+	line-height: 24px;
+
+	@include breakpoint($medium-up){
+		font-size: $font-size-medium;
+		line-height: 26px;
+	}
+}
+
+// Layout breakpoint where we switch to 1:3 layout
+
+@include breakpoint($medium-up){
+
+	.project-meta {
+		//padding-top: $space-medium;
+		padding-right: $space-medium;
+		margin-right: $space-medium;
+		overflow: auto;
+		position: relative;
+		
+		// Border on top
+		.project-title:before {
+			padding-top: $space-medium;
+		}
+		.project-title:before {
+			content: " ";
+			display: block;
+			border-top: 1px solid $grey-color-light;
+		}
+	}
+}
+
+/* Project Page */ 
+
+.block-item img {
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.note {
+	padding-top: $space-large;
+	padding-bottom: $space-large;
+}
+
+.note.under-construction {
+	background: #F4E66D;
+}
+
+
+/* Next Previous */ 
+
+.next-prev {
+	padding-top: $space-large*2;
+	padding-bottom: $space-large*2;
+}

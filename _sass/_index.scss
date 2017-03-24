@@ -1,0 +1,21 @@
+.section-heading {
+	//font-feature-settings: "smcp";
+	text-transform: uppercase;
+	font-size: $font-size-small;
+	letter-spacing: 0.1em;
+	border-bottom: 1px dashed #ccc;
+	font-weight: 500;
+}
+
+.flex-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column-left {
+
+	@include breakpoint($medium-up){
+		width: 50%;
+		padding: 0 1em;
+	}
+}

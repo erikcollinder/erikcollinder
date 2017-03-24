@@ -1,10 +1,13 @@
 <header class="site-header">
 
-  <div class="wrapper">
+  <div class="layout-row">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}: {{ site.subtitle }}</a>
+    <div class="layout-column">
+    
+    <p class="site-subtitle">The Pocket Sized Design Shop of</p>
+    <a class="site-title" href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
 
-    <nav class="site-nav">
+    <nav class="site-nav" style="display: none">
   
     {% assign sorted_nav = site.pages | sort: 'order' %}
 
@@ -17,8 +20,12 @@
         {% endif %}
         {% endfor %}
       </ul>
-    </div>
+    
   </nav>
+
+  
+  
+  </div>
 
 </div>
 

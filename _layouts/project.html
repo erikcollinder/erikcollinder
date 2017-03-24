@@ -4,22 +4,62 @@ layout: default
 
 <article class="post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.subtitle }}</h2>
+  <header class="project-header layout-row">
+    <div class="layout-column layout-aside">
+      <h1>{{ page.title }}</h1>
+
+      {% if page.roles %}
+
+      <ul>
+
+        {% for role in page.roles %}
+        <li>{{ role }}</li>
+        {% endfor %}
+
+      </ul>
+
+      {% endif %}
+    </div>
+
+    <div class="layout-column layout-right">
+      <h2>{{ page.subtitle }}</h2>
+      <p class="description">
+        {{ page.description }}
+      </p>
+
+      {% if page.table %}
+
+      <table>
+        {% for row in page.table %}
+        <tr>
+          <td>{{ row.key | markdownify }}</td>
+          <td>{{ row.value | markdownify }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+      {% endif %}
+    </div>
   </header>
 
-  {% if page.table %}
-	<dl>
-		{% for row in page.table %}			
-				<dt>{{ row.key }}</dt>
-				<dd>{{ row.value }}</dd>
-		{% endfor %}
-	</dl>
+  <!-- Content Blocks Start -->
+
+  {% include blocks.html %}
+
+  <!-- Free style content for the bottom of the page -->
+
+  {% if page.underconstruction == true %}
+  {% include underconstruction.html %}
   {% endif %}
 
-  <div class="post-content">
-    {{ content }}
+  <div class="post-content layout-row">
+    <div class="layout-column">
+      {{ content }}
+    </div>
   </div>
+
+  <!-- Next project -->
+
+  {% include nextprev.html %}
 
 </article>

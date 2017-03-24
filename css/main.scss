@@ -1,55 +1,56 @@
 ---
 ---
-
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Basic Gothic Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
+$base-font-family: "ff-basic-gothic-web-pro", Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font sizes
+
+$font-size-medium: 16px;
+$font-size-small:  $font-size-medium * 0.8;
+$font-size-large: $font-size-medium * 2;
+
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+// Spacers
+
+$space-small:  12px;
+$space-medium: 24px;
+$space-large:  48px;
 
 
 // Colours
 
-$text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+// Colour aliases
+$text-color:       #333;
+
 // Width of the content area
-$content-width:    900px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
+$content-width:    1280px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+    "breakpoints",
+    "base",
+    "layout",
+    "header",
+    "index",
+    "project",
+    "blocks"
 ;
 
+// Debug styles
+
+.hide {
+	display: none;
+}

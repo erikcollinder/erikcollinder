@@ -1,7 +1,5 @@
 ---
 title: Erik Collinder
-subtitle: Designer
-email: collinder.erik@gmail.com
 timezone: UTC
 collections:
   posts:
@@ -10,6 +8,12 @@ collections:
   projects:
     title: Projects
     output: true
+    permalink: "/:collection/:path/"
   uploads:
     title: Uploads
     output: true
+subtitle: Designer
+email: collinder.erik@gmail.com
+phone: "+49 157 92347590"
+sass:
+  style: compressed

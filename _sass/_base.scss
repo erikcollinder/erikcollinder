@@ -8,12 +8,15 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+img, article, div {
+    box-sizing: border-box;
+}
 
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font: $base-font-weight #{$font-size-medium}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -24,16 +27,14 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
+ul, ol, dl, hr,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $space-medium;
 }
 
 
@@ -55,8 +56,13 @@ figure > img {
     display: block;
 }
 
+picture {
+    display: block;
+}
+
+
 figcaption {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
 }
 
 
@@ -65,7 +71,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: $space-medium;
 }
 
 li {
@@ -81,15 +87,20 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-weight: 700;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: $font-size-large;
+    line-height: 48px;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: $font-size-medium;
+}
+
+h3 {
+    font-weight: 600;
 }
 
 
@@ -106,7 +117,6 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
     }
 }
 
@@ -117,8 +127,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    padding-left: $space-medium / 2;
     letter-spacing: -1px;
     font-style: italic;
 
@@ -154,44 +163,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
 
 /**
  * Icons
