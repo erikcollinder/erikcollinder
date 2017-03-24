@@ -6,7 +6,8 @@ graphics:
   - primary: header-evino.png
     color: black
   - opengraph: opengraph-wineinblack.png
-description: When I first started out working with Wine in Black my team was briefed with designing, develop and launching the next generation wine purchasing App. What we released wasn't just a shop in the App Store but arguably the fastest and easiest way to purchase wine.
+description: |
+    Evino is the fastest growing wine retailer in South America. Evino is all about great deals on great wine. These offers are short and sweet, so launching a snappy iOS app with the notifications a native application provides was a natural extension to their business.
 date: 2017-03-09
 roles: [Product Design, iOS Strategy & Design, Web Design]
 table:
