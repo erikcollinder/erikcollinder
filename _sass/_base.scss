@@ -1,3 +1,8 @@
+/* Mobile base size */            html { font-size: 62.5%; }
+@include breakpoint($small-up)  { html { font-size: 17px; } }
+@include breakpoint($medium-up) { html { font-size: 18px; } }
+@include breakpoint($large-up)  { html { font-size: 20px; } }
+
 /*
  * Reset some basic elements
  */
