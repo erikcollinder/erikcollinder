@@ -47,6 +47,8 @@ blocks:
   - title: And so we worked
     layout: break
 
+  - title: Reactive Responsive
+    layout: break
 ---
 
 # Notes 
