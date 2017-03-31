@@ -1,0 +1,124 @@
+// Use media queries like this:
+// @include largerthan($on-palm) {
+//     .wrapper {
+//         padding-right: $spacer-medium / 2;
+//         padding-left: $spacer-medium / 2;
+//     }
+// }
+
+
+$small-up:  28em;
+$medium-up: 48em;
+$large:  70em;
+
+
+@mixin largerthan($size-up) {
+    @media screen and (min-width: $size-up) {
+        @content;
+    }
+}
+
+@mixin smallerthan($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin resolution {
+  
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) { 
+        @content;
+	}
+}
+
+
+/* Crazy Font Size Calculations
+-------------------------------------------------- */
+
+@mixin rootsizecalc($rangemin,$rangemax,$fontmin,$fontmax){
+    @media screen and (min-width: #{$rangemin}px) and (max-width: #{$rangemax}px){
+        :root {
+            font-size: calc(#{$fontmin}px + (#{$fontmax} - #{$fontmin}) * (100vw - #{$rangemin}px ) / (#{$rangemax} - #{$rangemin}) );
+        }
+    }
+}
+        
+// @include largerthan($small-up)  { :root { font-size: 17px; } }
+// @include largerthan($medium-up) { :root { font-size: 18px; } }
+// @include largerthan($large)  { :root { font-size: 20px; } }
+
+
+// Largest base font size
+:root { font-size: 100%; }
+
+// Fluid base font size
+@include rootsizecalc(300,1280,17,20);
+@include rootsizecalc(1280,1920,20,22);
+
+// Largest base font size
+@include largerthan(1920px){ :root { font-size: 22px; } }
+
+
+
+
+
+
+
+/* Misc Tools
+====================================== */
+
+// Debug styles
+
+.hide, %hide {
+    display: none;
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+/**
+ * Non-jumping images while loading
+ */
+
+.img-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+img.responsive-image {
+    width: 100%;
+}
+
+/**
+ * Link areas
+ */
+
+
+.link-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

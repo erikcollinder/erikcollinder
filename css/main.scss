@@ -9,17 +9,17 @@ $font-family-default: $font-family-sans	;
 
 // Font sizes
 
-$font-size-medium: 17px;
+$font-size-medium: 1rem;
 $font-size-small:  $font-size-medium * 0.8;
 $font-size-large: $font-size-medium * 1.8;
 
 $base-font-weight: 400;
-$base-line-height: 1.5;
+
+$vertical-unit: 1.5rem;
 
 // Spacers
 
 $space-small:  12px;
-$space-medium: 24px;
 $space-large:  36px;
 
 
@@ -49,7 +49,7 @@ $content-width:    1440px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "breakpoints",
+    "tools",
     "base",
     "layout",
     "modules",
@@ -59,24 +59,4 @@ $content-width:    1440px;
     "blocks"
 ;
 
-// Debug styles
 
-.hide, %hide {
-	display: none;
-}
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-.gradient, %gradient {
-
-}
