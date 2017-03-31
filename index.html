@@ -7,8 +7,6 @@ order: 1
 <!-- Project tiles -->
 
 <div class="layout-row project-tiles">
-	<div class="layout-column">
-	</div>
 
 	{% for project in site.projects reversed %}
 		
@@ -20,7 +18,7 @@ order: 1
 	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
 	{% endcapture %}
 
-	<article class="project-item layout-column layout-tile">
+	<article class="project-item layout-column layout-tile fadein">
 		
 		<div class="img-container" style="background: {{ project.graphics[0].color }}">
 			<picture> 
@@ -61,7 +59,7 @@ order: 1
 
 <!-- Written content -->
 
-<div class="layout-row">
+<div class="layout-row hide">
 	<div class="layout-column layout-tile">
 		<h2>Big Names</h2>
 
