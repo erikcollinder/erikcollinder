@@ -24,15 +24,15 @@ body {
 
     @extend %clearfix;
 
-    @include breakpoint($medium-up) {
-        padding-top:    $space-medium;  
-        padding-bottom: $space-medium;  
+    @include largerthan($medium-up) {
+        padding-top:    $vertical-unit;  
+        padding-bottom: $vertical-unit;  
 
-        padding-right:  $space-medium/2;
-        padding-left:   $space-medium/2;  
+        padding-right:  $vertical-unit/2;
+        padding-left:   $vertical-unit/2;  
     }
 
-    @include breakpoint($large-up) {
+    @include largerthan($large) {
         padding-top: $space-large;
         padding-bottom: $space-large;
 
@@ -50,12 +50,12 @@ body {
     padding-left: $space-small/2;
     padding-right: $space-small/2;
 
-    @include breakpoint($medium-up) {
-        padding-right: $space-medium/2;
-        padding-left: $space-medium/2;  
+    @include largerthan($medium-up) {
+        padding-right: $vertical-unit/2;
+        padding-left: $vertical-unit/2;  
     }
 
-    @include breakpoint($large-up) {
+    @include largerthan($large) {
         padding-right: $space-large/2;
         padding-left: $space-large/2;  
     }
@@ -64,28 +64,28 @@ body {
 // Classes for controlling column widths, even at different sizes
 
 .layout-tile {
-    @include breakpoint($small-up){
+    @include largerthan($small-up){
         width: 50%;
         float: left;
     }
 }
 
 .layout-right {
-    @include breakpoint($medium-up) {
+    @include largerthan($medium-up) {
         width: 75%;
         float: right;
     }
 }
 
 .layout-left {
-    @include breakpoint($medium-up) {
+    @include largerthan($medium-up) {
         width: 75%;
         float: left;
     }
 }
 
 .layout-aside {
-    @include breakpoint($medium-up) {
+    @include largerthan($medium-up) {
         width: 25%;
         float: left;
     }
@@ -99,12 +99,12 @@ body {
     padding-left: $space-small/2;
     padding-right: $space-small/2;
 
-    @include breakpoint($medium-up) {
-        padding-right: $space-medium/2;
-        padding-left: $space-medium/2;  
+    @include largerthan($medium-up) {
+        padding-right: $vertical-unit/2;
+        padding-left: $vertical-unit/2;  
     }
 
-    @include breakpoint($large-up) {
+    @include largerthan($large) {
         padding-right: $space-large/2;
         padding-left: $space-large/2;  
     }
@@ -134,40 +134,35 @@ body {
     @extend %pin;
 }
 
-/* Misc Tools
+/* Layout breaks
 ====================================== */
 
-/**
- * Non-jumping images while loading
- */
+@include largerthan($large){
+    .site-header {
+        width: 28%;
+        position: absolute;
+        left: 0;
+    }
 
-.img-container {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-}
- 
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+    body {
+        margin-left: 28%;
+    }
 }
 
 
-img.responsive-image {
-    width: 100%;
-}
-
-/**
- * Link areas
- */
 
 
-.link-area {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
