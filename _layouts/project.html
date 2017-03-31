@@ -5,7 +5,7 @@ layout: default
 <article class="post">
 
   <header class="project-header layout-row">
-    <div class="layout-column layout-aside">
+    <div class="layout-column layout-aside fadein-1">
       <h1>{{ page.title }}</h1>
 
       {% if page.roles %}
@@ -21,7 +21,7 @@ layout: default
       {% endif %}
     </div>
 
-    <div class="layout-column layout-right">
+    <div class="layout-column layout-right fadein-2">
       <h2>{{ page.subtitle }}</h2>
       <p class="description">
         {{ page.description }}
@@ -44,7 +44,7 @@ layout: default
 
   <!-- Content Blocks Start -->
 
-  {% include blocks.html %}
+  {% include blocks.html class="fadein-3" %}
 
   <!-- Free style content for the bottom of the page -->
 
