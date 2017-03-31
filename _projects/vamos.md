@@ -19,7 +19,7 @@ roles:
    - Art Direction
 
 # Display
-title-display: 
+title-display: Co-founding a global Event Guide
 layout: project
 underconstruction: true
 date: 2012-03-09
