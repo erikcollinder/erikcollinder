@@ -19,7 +19,7 @@ phone: "+49 157 92347590"
 skype: erik.collinder
 linkedin: erikcollinder
 sass:
-  style: compressed
+  style: nested
 gems: [jekyll/imgix]
 imgix:
   source: erikcollinder.imgix.net # Your imgix source address
