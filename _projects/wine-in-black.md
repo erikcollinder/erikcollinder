@@ -20,6 +20,7 @@ date: 2017-03-09
 
 # Display
 
+title-display: Wine Shopping on iOS
 layout: project
 underconstruction: true
 
