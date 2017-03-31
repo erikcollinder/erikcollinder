@@ -6,7 +6,7 @@
  * Page content
  */
 .page-content {
-    padding: $space-medium 0;
+    padding: $vertical-unit 0;
 }
 
 .project-list, .post-list {
@@ -14,7 +14,7 @@
     list-style: none;
 
     > li {
-        margin-bottom: $space-medium;
+        margin-bottom: $vertical-unit;
     }
 }
 
@@ -32,22 +32,166 @@
     }
 }
 
+/* Project List
+======================================*/ 
 
+.project-tiles {
+    overflow: hidden;
+}
+
+@include smallerthan($medium-up) {
+    .project-tiles, .project-item.layout-column {
+        padding: 0;
+    }
+}
+
+// Image treatment 
+
+.project-tiles .project-image {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-link, .project-link:visited {
+    color: $color-ink;
+}
+
+.project-item {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 2rem;
+
+    .img-container {
+        // In addition to global styles found in _layout.scss
+        background: $color-grey-light;
+        padding-bottom: 75%; 
+        
+        
+        @include largerthan($medium-up){
+            // Shadow, 1px
+            &:after {
+                content: " ";
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                display: block;
+                border: 1px solid rgba(0,0,0,0.07);
+                //box-shadow:inset 0 0 1px rgba(0,0,0,0.1);
+            }
+
+            // Rounded Corners
+            border-radius: 3px;
+
+        }
+    }
+}
+
+
+// Trying to make these titles a global
+
+.project-title { 
+    margin-bottom: 0;
+    font-size: $font-size-medium;
+}
+.project-subtitle {
+    font-weight: 300; color: $color-ink;
+    font-size: $font-size-small;
+}
+
+.project-title, 
+.project-subtitle {
+    color: white;
+    line-height: 24px;
+}
+
+.project-meta-lockup {
+//  position: absolute;
+    // bottom: $vertical-unit;
+    // left: $vertical-unit;
+}
+
+.project-client-logotype {
+    height: $vertical-unit*1.5;  
+    @extend %vertical-rythm;
+
+    @include largerthan($small-up) {
+        height: $vertical-unit * 2;
+    }
+    
+}
+
+.section-heading {
+    //text-transform: uppercase;
+    //letter-spacing: 0.1em;
+    font-family: $font-family-serif;
+    font-size: $font-size-large;
+    border-bottom: 1px dashed #ccc;
+    font-weight: 500;
+}
+
+// Layout breakpoint where we switch to 1:3 layout
+
+@include largerthan($medium-up){
+
+    .project-meta {
+        //padding-top: $vertical-unit;
+        padding-right: $vertical-unit;
+        margin-right: $vertical-unit;
+        overflow: auto;
+        position: relative;
+        
+        // Border on top
+        .project-title:before {
+            padding-top: $vertical-unit;
+        }
+        .project-title:before {
+            content: " ";
+            display: block;
+            border-top: 1px solid $color-grey-light;
+        }
+    }
+}
+
+/* Project Page */ 
+
+.block-item img {
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: bold;
+}
+
+.note {
+    padding-top: $space-large;
+    padding-bottom: $space-large;
+}
+
+.note.under-construction {
+    background: #F4E66D;
+}
+
+
+/* Next Previous */ 
+
+.next-prev {
+    padding-top: $space-large*2;
+    padding-bottom: $space-large*2;
+}
 
 /**
  * Posts
  */
 .post-header {
-    margin-bottom: $space-medium;
+    margin-bottom: $vertical-unit;
 }
 
 .post-content {
-    margin-bottom: $space-medium;
+    margin-bottom: $vertical-unit;
 
     h2 {
         font-size: $font-size-medium;
 
-        @include breakpoint($medium-up) {
+        @include largerthan($medium-up) {
             font-size: $font-size-medium;
         }
     }
@@ -55,7 +199,7 @@
     h3 {
         font-size: $font-size-medium;
 
-        @include breakpoint($medium-up) {
+        @include largerthan($medium-up) {
             font-size: $font-size-medium;
         }
     }
@@ -63,8 +207,43 @@
     h4 {
         font-size: $font-size-medium;
 
-        @include breakpoint($medium-up) {
+        @include largerthan($medium-up) {
             font-size: $font-size-medium;
         }
     }
 }
+
+/* Fade in projects
+-------------------------------------------------- */
+
+@include largerthan($large) {
+    @supports(animation-delay: 100ms){
+        .fadein,
+        .fadein-1,
+        .fadein-2,
+        .fadein-3,
+        .fadein-4, {
+            animation: fadein 0.6s forwards;
+            opacity: 0; /* make things invisible upon start */
+        }
+    }  
+}
+
+@keyframes fadein {
+    0% {
+        opacity:0; 
+        transform: translate(0, $vertical-unit/2);
+    }
+    100% {
+        opacity:1;  
+    }
+    
+}
+
+
+
+.fadein:nth-child(1), .fadein-1 { -webkit-animation-delay: 80ms * 0; }
+.fadein:nth-child(2), .fadein-2 { -webkit-animation-delay: 80ms * 1; }
+.fadein:nth-child(3), .fadein-3 { -webkit-animation-delay: 80ms * 2; }
+.fadein:nth-child(4), .fadein-4 { -webkit-animation-delay: 80ms * 3; }
+
