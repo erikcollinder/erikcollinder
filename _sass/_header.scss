@@ -3,7 +3,7 @@
  */
 
 .site-header {
-    background: $color-white;
+    
 }
 .site-logo {
     float: left;
@@ -17,7 +17,6 @@
 .site-subtitle {
     margin-bottom: $space-small/2;
     font-size: $font-size-medium;
-    font-family: $font-family-serif;
 }
 
 .site-title {
@@ -37,7 +36,7 @@
 
     .page-link {
         color: $color-ink;
-        line-height: $base-line-height;
+        line-height: $vertical-unit;
 
         &.active {
             color: red;
@@ -53,12 +52,12 @@
         display: inline-block;
         margin: 0 20px 0 0;
         
-        @include breakpoint($medium-up){
+        @include largerthan($medium-up){
             margin: 0 0 0 20px;
         }
     }
     
-    @include breakpoint($medium-up){
+    @include largerthan($medium-up){
         float: right;
     }
 }
