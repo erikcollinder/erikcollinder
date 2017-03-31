@@ -1,8 +1,3 @@
-/* Mobile base size */            html { font-size: 62.5%; }
-@include breakpoint($small-up)  { html { font-size: 17px; } }
-@include breakpoint($medium-up) { html { font-size: 18px; } }
-@include breakpoint($large-up)  { html { font-size: 20px; } }
-
 /*
  * Reset some basic elements
  */
@@ -21,9 +16,10 @@ img, article, div {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$font-size-medium}/#{$base-line-height} $font-family-default;
+    font-family: $font-family-default;
+    font-weight: $base-font-weight;
+    line-height: #{$vertical-unit};
     color: $color-ink;
-    background-color: $color-background;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -39,12 +35,12 @@ body {
 
 
  %vertical-rythm {
-    margin-bottom: $space-medium/2;
+    margin-bottom: $vertical-unit/2;
  }
 
 .page-content { 
     h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, hr {
-        margin-bottom: $space-medium/2;       
+        margin-bottom: $vertical-unit/2;       
     }
 }
 
@@ -53,7 +49,7 @@ dd, dt {
 }
 
 hr {
-    height: $space-medium;
+    height: $vertical-unit;
     background: $color-key;
     display: block;
 }
@@ -91,7 +87,7 @@ figcaption {
  * Lists
  */
 ol {
-    margin-left: $space-medium;
+    margin-left: $vertical-unit;
 }
 
 li {
@@ -164,7 +160,7 @@ a {
 blockquote {
     color: $color-grey;
     border-left: 4px solid $color-grey-light;
-    padding-left: $space-medium / 2;
+    padding-left: $vertical-unit / 2;
     letter-spacing: -1px;
     font-style: italic;
 
