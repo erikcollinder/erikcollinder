@@ -1,5 +1,4 @@
 ---
-title: Contact + Hire
 layout: default-wrapped
 order: 5
 ---

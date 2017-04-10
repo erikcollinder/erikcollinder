@@ -2,10 +2,78 @@
 ====================================== */
 
 html { background-color: $color-background; }
-body {
-   // max-width: $content-width;
-    margin: 0 auto 0 auto;
+
+/* Padding Classes
+====================================== */
+
+.padding-global-uniform { // Maybe we replace 'padding-global' with 'padding' at some point
+    position: relative; // It's not certain at all that this should be here
+    padding: $space/2;
+    @include largerthan($medium) {
+        padding: $space;
+    }
 }
+
+.padding-global { // Kind of like padding 'default'. Of course it's global
+    @extend .padding-global-uniform;
+    padding-left: $space/2;
+    padding-right: $space/2;
+    padding-top: $space;
+    padding-bottom: $space;
+
+}
+
+
+.padding-global-section {
+    @extend .padding-global-uniform;
+    
+    padding-top: $space * 1.5 ;
+    padding-bottom: $space * 1.5;
+
+    @include largerthan($medium) {
+        padding-right: calc(50vw - 300px);
+        padding-left: calc(50vw - 300px); 
+    }
+    @include largerthan($large) {
+        padding-right: calc(50vw - 400px);
+        padding-left:  calc(50vw - 400px);
+        padding-top: $space * 2;
+        padding-bottom: $space * 2;
+    }
+
+}
+
+.padding-global-vertical {
+    @extend .padding-global-uniform;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.padding-top-extra {
+                                  padding-top: $space * 2;
+    @include largerthan($large){  padding-top: $space * 3; }
+}
+
+/* Layout breaks
+====================================== */
+
+@include largerthan($large){
+    // .site-header {
+    //     width: 28%;
+    //     position: absolute;
+    //     left: 0;
+    // }
+
+    // body {
+    //     //padding-left: 18%;
+    // }
+
+    // section.padding-global {
+    //     padding-left: 28%;   
+    // }
+}
+
+
 
 /* Rows and Columns
 ====================================== */
@@ -24,7 +92,7 @@ body {
 
     @extend %clearfix;
 
-    @include largerthan($medium-up) {
+    @include largerthan($medium) {
         padding-top:    $vertical-unit;  
         padding-bottom: $vertical-unit;  
 
@@ -50,7 +118,7 @@ body {
     padding-left: $space-small/2;
     padding-right: $space-small/2;
 
-    @include largerthan($medium-up) {
+    @include largerthan($medium) {
         padding-right: $vertical-unit/2;
         padding-left: $vertical-unit/2;  
     }
@@ -71,42 +139,23 @@ body {
 }
 
 .layout-right {
-    @include largerthan($medium-up) {
+    @include largerthan($medium) {
         width: 75%;
         float: right;
     }
 }
 
 .layout-left {
-    @include largerthan($medium-up) {
+    @include largerthan($medium) {
         width: 75%;
         float: left;
     }
 }
 
 .layout-aside {
-    @include largerthan($medium-up) {
+    @include largerthan($medium) {
         width: 25%;
         float: left;
-    }
-}
-
-
-/* Padding Classes
-====================================== */
-
-.padding-global {
-    padding-left: $space-small/2;
-    padding-right: $space-small/2;
-
-    @include largerthan($medium-up) {
-        padding-right: $vertical-unit/2;
-        padding-left: $vertical-unit/2;  
-    }
-
-    @include largerthan($large) {
-        padding-right: $space-large/2;
-        padding-left: $space-large/2;  
     }
 }
 
@@ -133,23 +182,6 @@ body {
 .pin-bottom-right {
     @extend %pin;
 }
-
-/* Layout breaks
-====================================== */
-
-@include largerthan($large){
-    .site-header {
-        width: 28%;
-        position: absolute;
-        left: 0;
-    }
-
-    body {
-        margin-left: 28%;
-    }
-}
-
-
 
 
 

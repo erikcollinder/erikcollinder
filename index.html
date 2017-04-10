@@ -2,127 +2,115 @@
 title: Intro
 layout: default
 order: 1
+announcement: true
+intro: | 
+    Interaction Design, Art Direction, Illustration and Business. The business ingredient is essential to why you and I, dear client, could really hit it off. Design is a wonderful lucrative tool for any company when used right. I've spent a long time trying to work out exactly how.
+    
+    *While waiting for more detailed case studies, you can read about my experience here or check out these assorted visuals.*
+
+myself: |
+    Designer born in suburban Stockholm, working with people and companies to make their product work and look better. This takes place wherever you, the client, belong — or from my office in Kreuzberg, Berlin.
+
+contact: |
+    All email and every phone call is annoying apart from when it's from a client: *I love it* when clients call or write. I'm half-joking, please get in touch.
+    You're not sure if you need a designer? Send me a brief email about your project or company and we'll figure it out.
+    
+    - collinder.erik@gmail.com
+    - +49 157 92347590
+    
+now: | 
+    <small>2017 April 8th</small>
+    
+    Writing case studies to make this site a little more useful. Talking to the right people about the right projects and collaborating with [Malte Schonvogel][1]. 
+
+    [1]: http://erikandmalte.com/
+
+    <small>2017 April 7th</small>
+    
+    Launched this interim portfolio site.
+
 ---
 
-<!-- Project tiles -->
+<section id="work" class="padding-global-section">
+    <h2 class="section-title">Work</h2>
+    <div class="writing-on-the-wall workworkwork"></div>
+    {{ page.intro | markdownify }}
+    <div class="assorted-visuals">
+        <img src="/uploads/project-1.png" alt="">
+        <img src="/uploads/project-2.png" alt="">
+        <img src="/uploads/project-3.png" alt="">
+        <img src="/uploads/project-1.png" alt="">
+    </div>
+</section>
 
-<div class="layout-row project-tiles">
+<section id="now" class="padding-global-section">
+    <h2 class="section-title">Currently</h2>
+    <div id="myself" class="writing-on-the-wall nownownow"></div>
+    {{ page.now | markdownify }}
+</section>
 
-	{% for project in site.projects reversed %}
-		
-	{% capture image_url %}
-	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
-	{% endcapture %}
+<section id="myself" class="padding-global-section">
+    <h2 class="section-title">Myself</h2>
+    <div class="writing-on-the-wall mememe"></div>
+    <div class="portrait" src="" alt="Portrait of Erik"></div>
+    {{ page.myself | markdownify }}
+</section>
 
-	{% capture image_url_mobile %}
-	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
-	{% endcapture %}
-
-	<article class="project-item layout-column layout-tile fadein">
-		
-		<div class="img-container" style="background: {{ project.graphics[0].color }}">
-			<picture> 
-				<img class="project-image" src="{{ image_url }}" alt="{{ project.title }}"/>
-			</picture>
-		
-		
-			<div class="project-meta-lockup pin-bottom-left">
-			{% if project.client %}
-
-			{% assign logo_name = site.data.clients[project.client].logo %}
-
-				<img
-					class="project-client-logotype"
-					src="/assets/logos/{{ logo_name }}" alt="Logotype of {{ project.client }}">
-	        {% endif  %}
-
-			
-			<h3 class="project-title">
-				{% if project.title-display %}
-				{{ project.title-display }}
-				{% else %}
-				{{ project.title }}
-				{% endif %}
-			</h3>
-
-			</div>
-		</div>		
-
-		<a class="link-area" href="{{project.url}}"></a>
-	</article>		
-
-	{% endfor %}
-
-</div>
+<section id="contact" class="padding-global-section">
+    <h2 class="section-title">Contact</h2>
+    <div class="writing-on-the-wall nownownow"></div>
+    {{ page.contact | markdownify }}
+</section>
 
 
+
+<!-- Everything below here is hidden for now  -->
 
 <!-- Written content -->
 
 <div class="layout-row hide">
-	<div class="layout-column layout-tile">
-		<h2>Big Names</h2>
+    <div class="layout-column layout-tile">
+        <h2>Big Names</h2>
 
-		<ul>
+        <ul>
 
-			{% assign bragable = site.data.clients | where:'brag', true %}
+            {% assign bragable = site.data.clients | where:'brag', true %}
 
-			{% for client in bragable %}
+            {% for client in bragable %}
 
-			<li>{{ client.name }}</li>
-			<img src="/assets/logos/{{ client.logo }}" alt="">
+            <li>{{ client.name }}</li>
+            <img src="/assets/logos/{{ client.logo }}" alt="">
 
-			{% endfor %}
-		</ul>
-	</div>
+            {% endfor %}
+        </ul>
+    </div>
 
-	<div class="layout-column layout-tile">
-		<h2>Clients close to my heart</h2>
+    <div class="layout-column layout-tile">
+        <h2>Clients close to my heart</h2>
 
-		<ul>
-			<li>Vamos</li>
-			<li>B-Reel</li>
-			<li>Wine in Black</li>
-			<li>Evino</li>
-			<li>Sean Williams</li>
-		</ul>
-	</div>
+        <ul>
+            <li>Vamos</li>
+            <li>B-Reel</li>
+            <li>Wine in Black</li>
+            <li>Evino</li>
+            <li>Sean Williams</li>
+        </ul>
+    </div>
 </div>
 
 <!-- Work friends -->
 <div class="layout-row hide">
-	<div class="layout-column">
-		<h2>Work friends that will vouch for me</h2>
+    <div class="layout-column">
+        <h2>Work friends that will vouch for me</h2>
 
-		<dl>
-			{% for friend in site.data.friends %}
+        <dl>
+            {% for friend in site.data.friends %}
 
-			<dt>{{ friend.name}}</dt>
-			<dd>{{ friend.title}} at {{ friend.company }}</dd>
+            <dt>{{ friend.name}}</dt>
+            <dd>{{ friend.title}} at {{ friend.company }}</dd>
 
-			{% endfor %}
+            {% endfor %}
 
-		</dl>
-	</div>
-</div>
-
-<!-- Experince and origins -->
-<div class="layout-row hide">
-
-	<div class="layout-column layout-tile">
-		<h2>Expericence</h2>
-		<p>TL;DR • </p>
-	</div>
-	<div class="layout-column layout-tile">
-
-
-		<dl>
-			{% for milestone in site.data.origins %}
-
-			<dt>{{ milestone.title}}</dt>
-			<dd>{{ milestone.description }}</dd>
-
-			{% endfor %}
-		</dl>
-	</div>
+        </dl>
+    </div>
 </div>

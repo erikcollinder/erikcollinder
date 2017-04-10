@@ -1,0 +1,55 @@
+---
+layout: default
+order: 1
+---
+
+<!-- Project tiles -->
+
+<div class="layout-row project-tiles">
+
+	{% for project in site.projects reversed %}
+		
+	{% capture image_url %}
+	/uploads/{{project.slug}}/{{project.graphics[0].primary}}
+	{% endcapture %}
+
+	{% capture image_url_mobile %}
+	/uploads/{{project.slug}}/{{project.graphics[0].mobile}}
+	{% endcapture %}
+
+	<article class="project-item layout-column layout-tile fadein">
+		
+		<div class="img-container" style="background: {{ project.graphics[0].color }}">
+			<picture> 
+				<img class="project-image" src="{{ image_url }}" alt="{{ project.title }}"/>
+			</picture>
+		
+		
+			<div class="project-meta-lockup pin-bottom-left">
+			{% if project.client %}
+
+			{% assign logo_name = site.data.clients[project.client].logo %}
+
+				<img
+					class="project-client-logotype"
+					src="/assets/logos/{{ logo_name }}" alt="Logotype of {{ project.client }}">
+	        {% endif  %}
+
+			
+			<h3 class="project-title">
+				{% if project.title-display %}
+				{{ project.title-display }}
+				{% else %}
+				{{ project.title }}
+				{% endif %}
+			</h3>
+
+			</div>
+		</div>		
+
+		<a class="link-area" href="{{project.url}}"></a>
+	</article>		
+
+	{% endfor %}
+
+</div>

@@ -1,36 +1,41 @@
-<header class="site-header">
+<header class="padding-global-section padding-top-extra">
 
-  <div class="layout-row">
 
-    <div class="layout-column" style="overflow: auto;">
-    
     <div class="site-logo">
-      <p class="site-subtitle">Pocket-sized design studio</p>
       <p class="site-title">{{ site.title }}</p>
-      <a class="link-area" href="{{ site.baseurl }}/"></a>
+      <p class="site-subtitle">Micro Design Shop</p>
+      <a class="" href="{{ site.baseurl }}/"></a>
     </div>
 
-    <nav class="site-nav" style="display: none">
-  
-    {% assign sorted_nav = site.pages | sort: 'order' %}
+    <nav class="site-nav" >
+    
+      {% assign sorted_nav = site.pages | sort: 'order' %}
 
       <ul>
         {% for my_page in sorted_nav | sort: mypage.order %}
         {% if my_page.title %}
         <li>
-          <a class="page-link {% if my_page.url == page.url %}active{% endif %}"  href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
+          <a class="nav-link {% if my_page.url == page.url %}active{% endif %}"  href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+  </ul>
+
+    </nav>
+
+    <!-- Accepting Projects. We can turn this into a toggle later -->
     
-  </nav>
+    {% if page.announcement %}
+    
+    <div id="announcement">
+      <span class="date">April 2017</span>
+      <h3>Accepting Projects</h3>
+      <p class="description">I thrive in many design practices but I would especially love to take on App Design, Identity Systems or Editorial Design.</p>
+      <a href="#contact">Contact ↓</a>
+    </div>
 
-  
-  
-  </div>
+    {% endif %}
 
-</div>
 
 </header>
 

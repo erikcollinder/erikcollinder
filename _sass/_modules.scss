@@ -1,3 +1,182 @@
+/* Dark or bright theme
+======================================*/ 
+
+.dark {
+    color: $color-ink-positive;
+    background-image: linear-gradient(-180deg, #351B31 0%, #42233D 100%);
+}
+
+.bright {
+    color: $color-ink-negative;
+    background: white;
+}
+
+
+
+/* Header and navigation
+======================================*/ 
+
+.site-header {
+    background: $color-background;   
+}
+.site-logo {
+}
+
+.site-title, .site-subtitle {
+    color: $color-ink;
+}
+
+.site-subtitle {
+    margin-bottom: $space-small/2;
+    font-size: $font-size-medium;
+}
+
+.site-title {
+    font-size: $font-size-large;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-bottom: 0;
+}
+
+.site-nav {
+    @extend .padding-global-vertical;
+
+    .nav-link {
+        padding: $space/4 0;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin-right: $space;
+        &:before {display: none;}
+    }
+    .active {
+        border-bottom: 2px $color-key solid;
+    }
+}
+
+/* Temporary Start Page
+======================================*/ 
+
+#announcement {
+    @extend .padding-global-uniform;
+    @extend .bright;
+    border: 1px $color-ink-positive solid;
+    // background: #1F2DA2;
+
+    .date {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: $font-size-tiny;
+        opacity: 0.8;
+    }
+}
+.section-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: $font-size-medium * 1.2;
+
+    font-weight: 600;
+}
+
+
+.writing-on-the-wall {
+    @extend .hide;
+    //@extend .outline;
+    height: 128px;
+    background-repeat: repeat-x;
+    background-position: center center;
+    overflow-x: hide;
+    
+    // Make it take up the entire screen
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    &.mememe          {background-image: url('/assets/mememe.svg');}
+    &.workworkwork    {background-image: url('/assets/workworkwork.svg');}
+    &.nownownow       {background-image: url('/assets/nownownow.svg');}
+    &.hellohellohello {background-image: url('/assets/hellohellohello.svg');}
+}
+
+/* Section Specific Modifications
+======================================*/ 
+
+#work {
+
+}
+
+#myself {
+    @extend .dark;
+}
+
+#contact
+#myself
+#now
+
+/* Myself
+======================================*/ 
+
+#myself .portrait {
+    //border-radius: 50%;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 172px;
+    max-height: 172px;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-size: 98%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    background-color: red;
+    // Resolution Tweaks
+    background-image: url('/uploads/portrait.png') ;
+    @include resolution {background-image: url('/uploads/portrait@2x.png');}
+    
+    // Layout Tweaks
+    top: -$space/2;
+    right: $space;
+    @include largerthan($medium) { right: 25%; }
+}
+
+/* Experince
+======================================*/ 
+
+#experience {
+    
+    dt {
+        
+    }
+
+    @include largerthan($large){
+        dt, img, span {
+            margin-top: 0;
+            clear: left;
+            float: left; 
+            width: calc(35% - 24px);
+        } 
+        dd {
+            //margin-bottom: $space;
+            margin-left: 35%;
+        }
+
+        img {
+            
+        }
+    }
+}
+
+.milestone {
+    margin-top: $space;
+}
+
+
 .site-footer {
 	@extend %hide;
 }
@@ -39,7 +218,7 @@
     overflow: hidden;
 }
 
-@include smallerthan($medium-up) {
+@include smallerthan($medium) {
     .project-tiles, .project-item.layout-column {
         padding: 0;
     }
@@ -67,7 +246,7 @@
         padding-bottom: 75%; 
         
         
-        @include largerthan($medium-up){
+        @include largerthan($medium){
             // Shadow, 1px
             &:after {
                 content: " ";
@@ -119,18 +298,9 @@
     
 }
 
-.section-heading {
-    //text-transform: uppercase;
-    //letter-spacing: 0.1em;
-    font-family: $font-family-serif;
-    font-size: $font-size-large;
-    border-bottom: 1px dashed #ccc;
-    font-weight: 500;
-}
-
 // Layout breakpoint where we switch to 1:3 layout
 
-@include largerthan($medium-up){
+@include largerthan($medium){
 
     .project-meta {
         //padding-top: $vertical-unit;
@@ -191,7 +361,7 @@ dt {
     h2 {
         font-size: $font-size-medium;
 
-        @include largerthan($medium-up) {
+        @include largerthan($medium) {
             font-size: $font-size-medium;
         }
     }
@@ -199,7 +369,7 @@ dt {
     h3 {
         font-size: $font-size-medium;
 
-        @include largerthan($medium-up) {
+        @include largerthan($medium) {
             font-size: $font-size-medium;
         }
     }
@@ -207,7 +377,7 @@ dt {
     h4 {
         font-size: $font-size-medium;
 
-        @include largerthan($medium-up) {
+        @include largerthan($medium) {
             font-size: $font-size-medium;
         }
     }
@@ -247,3 +417,8 @@ dt {
 .fadein:nth-child(3), .fadein-3 { -webkit-animation-delay: 80ms * 2; }
 .fadein:nth-child(4), .fadein-4 { -webkit-animation-delay: 80ms * 3; }
 
+// When arriving to a hashed section, flash in yellow
+
+section:target {
+    border: 12px yellow solid;
+} 

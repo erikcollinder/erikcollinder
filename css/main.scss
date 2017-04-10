@@ -11,40 +11,45 @@ $font-family-default: $font-family-sans	;
 
 $font-size-medium: 1rem;
 $font-size-small:  $font-size-medium * 0.8;
+$font-size-tiny:  $font-size-medium * 0.6;
 $font-size-large: $font-size-medium * 1.8;
 
-$base-font-weight: 400;
+$base-font-weight: 300;
 
+
+// This right here has to serve as the basis for everything
 $vertical-unit: 1.5rem;
 
 // Spacers
 
+$space: $vertical-unit * 1.5;
+
+
+// Maybe delete these fuckers
 $space-small:  12px;
 $space-large:  36px;
 
 
 // Colours
 
-
-
-// Colours gray scale
-
-$color-offblack: black;
+$color-offblack:   black;
 $color-grey:       #828282;
 $color-grey-light: lighten($color-grey, 30%);
 $color-grey-dark:  darken($color-grey, 25%);
-$color-white: #e0e5ea;
+$color-white:      #e0e5ea;
 
 
 // Colour aliases
 
-$color-key:      #9EE3DC;
-$color-ink: $color-offblack;
-$color-background: $color-white;
+$color-key:        #F179C1;
+$color-ink:        #371C32;
+$color-ink-positive: white;
+$color-ink-negative: #371C32;
+$color-background: #DCC7DA;
 
 // Width of the content area
 
-$content-width:    1440px;
+$content-width: 1440px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

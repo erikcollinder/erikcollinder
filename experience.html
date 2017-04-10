@@ -1,0 +1,42 @@
+---
+title: Experience
+layout: default
+order: 2
+intro: | 
+        Born in the outskirts of Stockholm, I'm as Swedish as they come. It's covered up with a faux British accent but I still love snow and boats.
+
+        A chronological tale of how I substituted university studies with experience, mentors, books and internet access and ended up doing design work from my office in Berlin.
+---
+
+<!-- Experince and origins -->
+<section id="experience" class="padding-global-section">
+
+    <div>
+        {{ page.intro | markdownify}}
+
+    </div>
+    
+    <hr>
+
+    <dl>
+        {% for milestone in site.data.origins %}
+        
+        <div class="milestone">
+            <span>{{ milestone.year}}</span>
+            <dt>{{ milestone.title}}</dt>
+            
+            {% if milestone.graphic %}
+            <img src="{{ milestone.graphic }}" alt="">
+            {% endif %}
+
+            <dd>{{ milestone.description | markdownify }}</dd>
+        </div>
+
+        {% endfor %}
+
+    </dl>
+</section>
+
+<section class="padding-global-section">
+    <a href="/#now">Home</a>
+</section>

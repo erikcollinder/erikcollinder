@@ -1,5 +1,4 @@
 ---
-title: Updates
 layout: default-wrapped
 order: 4
 ---

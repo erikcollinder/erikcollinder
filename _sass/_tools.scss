@@ -8,7 +8,7 @@
 
 
 $small-up:  28em;
-$medium-up: 48em;
+$medium: 48em;
 $large:  70em;
 
 
@@ -25,7 +25,6 @@ $large:  70em;
 }
 
 @mixin resolution {
-  
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min-resolution: 192dpi) { 
@@ -46,7 +45,7 @@ $large:  70em;
 }
         
 // @include largerthan($small-up)  { :root { font-size: 17px; } }
-// @include largerthan($medium-up) { :root { font-size: 18px; } }
+// @include largerthan($medium) { :root { font-size: 18px; } }
 // @include largerthan($large)  { :root { font-size: 20px; } }
 
 
@@ -73,6 +72,10 @@ $large:  70em;
 
 .hide, %hide {
     display: none;
+}
+
+.outline {
+  outline: 1px pink dotted;
 }
 
 /**
